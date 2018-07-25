@@ -1,0 +1,3 @@
+rootProject.name = 'CloudTechnician'
+
+include ':app'
