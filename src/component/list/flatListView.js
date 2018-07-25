@@ -4,12 +4,6 @@
 import React from 'react'
 import { ActivityIndicator, FlatList, RefreshControl, StyleSheet, Platform, Text, View, Image } from 'react-native'
 import PropTypes from 'prop-types'
-import InteractionManager from './InteractionManager'
-import GlobalIcons from '../../constant/GlobalIcon'
-import GlobalStyles from '../../constant/GlobalStyle'
-
-const __IOS__ = Platform.OS === 'ios';
-const __ANDROID__ = Platform.OS === 'android';
 
 // 上拉刷新的状态
 const EndReachedStatus = {
@@ -307,9 +301,9 @@ class FooterComponent extends React.PureComponent {
                         <Text style={styles.footerText}>正在加载...</Text>
                     </View>) : (
                         <View style={[styles.container, styles.endContainer]}>
-                            <View style={[GlobalStyles.horLine, styles.horLine]} />
+                            <View style={[GlobalStyle.horLine, styles.horLine]} />
                             <Text style={styles.titleName}>已经到底了</Text>
-                            <View style={[GlobalStyles.horLine, styles.horLine]} />
+                            <View style={[GlobalStyle.horLine, styles.horLine]} />
                         </View>
                     )}
             </View>
@@ -380,7 +374,7 @@ const styles = StyleSheet.create({
         // marginBottom: 10,
     },
     emptyContainer: {
-        height: GlobalStyles.height * 0.6,
+        height: GlobalStyle.height * 0.6,
         justifyContent: 'center',
         alignItems: 'center',
         // backgroundColor: 'blue',

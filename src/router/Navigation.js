@@ -1,5 +1,5 @@
 /**
- * 校园空兼 - Navigation
+ * 云技师 - Navigation
  * https://menger.me
  * @大梦
  */

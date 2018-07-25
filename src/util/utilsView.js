@@ -46,7 +46,7 @@ export default class ViewUtils {
                         <Text>{text}</Text>
                     </View>
                     <Image
-                        source = {expandableIco ? expandableIco : GlobalIcons.icon_angle_left_white}
+                        source = {expandableIco ? expandableIco : Images.icon_arrow_left}
                         style = {[styles.settingBtnIcon, tintStyle]}
                     />
                 </View>
@@ -67,7 +67,7 @@ export default class ViewUtils {
                 style = {{padding: 8}}
                 onPress = {callBack}
             >
-                <Image style={{width: 26, height: 26,}} source={GlobalIcons.icon_angle_left_white}/>
+                <Image style={{width: 26, height: 26,}} source={Images.icon_arrow_left}/>
             </TouchableOpacity>
         )
     }
@@ -108,7 +108,7 @@ export default class ViewUtils {
                 underlayColor = {'transparent'}
             >
                 <View style={{paddingRight: 8}}>
-                <Image style={styles.moreMenuBtnIcon} source={GlobalIcons.icon_angle_left_white} />
+                <Image style={styles.moreMenuBtnIcon} source={Images.icon_arrow_left} />
                 </View>
             </TouchableHighlight>
         )
@@ -127,7 +127,7 @@ export default class ViewUtils {
                 onPress = {callBack}
                 underlayColor = {'transparent'}
             >
-                <Image style={styles.shareBtnIcon} source={GlobalIcons.icon_angle_left_white}/>
+                <Image style={styles.shareBtnIcon} source={Images.icon_arrow_left}/>
             </TouchableHighlight>
         )
     }

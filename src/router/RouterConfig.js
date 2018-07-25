@@ -1,5 +1,5 @@
 /**
- * 校园空兼 - RouterConfig
+ * 云技师 - RouterConfig
  * https://menger.me
  * @大梦
  */
@@ -12,6 +12,7 @@ import {configRouter, tabOptions} from './RouterTool'
 
 import Home from "../page/home/home"
 import Mine from "../page/mine/mine"
+import Login from "../page/login/login"
 
 import CommonWebPage from '../page/common/commonWebPage'
 
@@ -37,7 +38,7 @@ const TabNavigator = createBottomTabNavigator({
     tabBarOptions: {
         showIcon: true,
         indicatorStyle: {height: 0},
-        activeTintColor: CusTheme.themeColor,
+        activeTintColor: GlobalStyle.themeColor,
         style: {
             backgroundColor: "#fff"
         },
@@ -54,12 +55,14 @@ const TabNavigator = createBottomTabNavigator({
 const StackNavigator = createStackNavigator(configRouter({
     Tab: {screen: TabNavigator},
     CommonWebPage: {screen: CommonWebPage},
+
+    Login: {screen: Login},
 }), {
     initialRouteName: 'Tab',
     cardStyle: {
         shadowOpacity: 0,
         shadowRadius: 0,
-        backgroundColor: CusTheme.pageBackgroundColor,
+        backgroundColor: GlobalStyle.pageBackgroundColor,
     },
     navigationOptions: {
         header: null,

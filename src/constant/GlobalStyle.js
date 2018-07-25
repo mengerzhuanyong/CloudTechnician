@@ -11,7 +11,7 @@ import {
 
 const __IOS__ = Platform.OS === 'ios';
 const {width, height} = Dimensions.get('window');
-const themeColor = '#5a89f5';
+const themeColor = '#292929';
 
 module.exports = {
     width: width,

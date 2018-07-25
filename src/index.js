@@ -1,5 +1,5 @@
 /**
- * 校园空兼 - Index
+ * 云技师 - Index
  * https://menger.me
  * @大梦
  */
@@ -17,7 +17,7 @@ export default class Index extends React.Component {
     }
 
     componentDidMount() {
-        this._handleLoginState(); // 处理登陆状态
+        // this._handleLoginState(); // 处理登陆状态
     }
 
     componentWillUnmount() {};

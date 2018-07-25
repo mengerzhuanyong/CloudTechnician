@@ -18,14 +18,10 @@ import {
 } from 'react-native'
 import PropTypes from 'prop-types'
 
-import GlobalStyles from '../../constant/GlobalStyle'
-import GlobalIcons from '../../constant/GlobalIcon'
-
-const isIos =  Platform.OS === 'ios';
-const screenWidth = Dimensions.get('window').width;
-const NAV_BAR_HEIGHT_IOS = GlobalStyles.statusBar_Height_Ios;
-const NAV_BAR_HEIGHT_ANDROID = GlobalStyles.statusBar_Height_Android;
+const NAV_BAR_HEIGHT_IOS = GlobalStyle.statusBar_Height_Ios;
+const NAV_BAR_HEIGHT_ANDROID = GlobalStyle.statusBar_Height_Android;
 const STATUS_BAR_HEIGHT = 20;
+
 const ButtonShape = {
     title: PropTypes.string.isRequired,
     style: PropTypes.any,
@@ -114,7 +110,8 @@ export default class NavigationBar extends Component {
                         style={[data.style, style,]}
                         tintColor={data.tintColor}
                         disabled={data.disabled}
-                        handler={data.handler}/>
+                        handler={data.handler}
+                    />
                 )}
             </View>
         );
@@ -182,13 +179,13 @@ class NavBarButton extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: GlobalStyles.themeColor,
+        backgroundColor: GlobalStyle.themeColor,
     },
     navBar: {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
-        height: isIos ? NAV_BAR_HEIGHT_IOS : NAV_BAR_HEIGHT_ANDROID,
+        height: __IOS__ ? NAV_BAR_HEIGHT_IOS : NAV_BAR_HEIGHT_ANDROID,
         // backgroundColor: 'red',
         // shadowOffset:{
         //     width: 1,
@@ -219,6 +216,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     statusBar: {
-        height: isIos ? STATUS_BAR_HEIGHT : 0,
+        height: __IOS__ ? STATUS_BAR_HEIGHT : 0,
     },
 })

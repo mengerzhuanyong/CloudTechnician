@@ -1,5 +1,5 @@
 /**
- * 校园空兼 - Home
+ * 云技师 - Mine
  * https://menger.me
  * @大梦
  */
@@ -12,7 +12,7 @@ import {
     StyleSheet,
 } from 'react-native'
 
-export default class Home extends Component {
+export default class Mine extends Component {
 
     constructor(props) {
         super(props);
@@ -24,8 +24,8 @@ export default class Home extends Component {
 
     render() {
         return (
-            <View style={styles.container} >
-                <Text>Home</Text>
+            <View style={styles.container}>
+                <Text style={styles.textStyle}>Mine</Text>
             </View>
         );
     }
@@ -33,6 +33,13 @@ export default class Home extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#f60',
+    },
+    textStyle: {
+        fontSize: 16,
+        color: '#fff',
     }
 });

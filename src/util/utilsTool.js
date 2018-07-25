@@ -18,6 +18,7 @@ import {
     Dimensions,
     PixelRatio,
 } from 'react-native';
+import * as DeviceInfo from "react-native-device-info";
 
 const deviceWidth = Dimensions.get('window').width;      //设备的宽度
 const deviceHeight = Dimensions.get('window').height;    //设备的高度
@@ -87,37 +88,39 @@ const fontSize = (size) => {
     return size;
 };
 
-const ScaleSize = (size) => {
+const scaleSize = (size) => {
     size = Math.round(size * scale + 0.5);
     return size / defaultPixel;
-}
+};
+
 /**
-     * 判断是否是手机号
-     * @param mobile
-     * @returns {boolean}
-     */
+ * 判断是否是手机号
+ * @param mobile
+ * @returns {boolean}
+ */
 const isMobile = (mobile) => {
-    let myreg = /(^1[3|4|5|7|8]\d{9}$)|(^09\d{8}$)/;
-    let re2 = new RegExp(myreg);
-    return re2.test(mobile);
-}
+    let myReg = /(^1[3|4|5|7|8]\d{9}$)|(^09\d{8}$)/;
+    let res = new RegExp(myReg);
+    return res.test(mobile);
+};
+
 /**
-   * 表单手机号验证过程
-   * @param mobile  手机号
-   * @returns {boolean}  为true进行下一步
-   */
+ * 表单手机号验证过程
+ * @param mobile  手机号
+ * @returns {boolean}  为true进行下一步
+ */
 const checkMobile = (mobile) => {
     if (isEmpty(mobile)) {
         // Toast.fail('请输入手机号');
         return false;
     }
     if (!isMobile(mobile)) {
-        alert('mobile')
+        alert('mobile');
         // Toast.fail('请输入正确的手机号');
         return false;
     }
-    return true
-}
+    return true;
+};
 
 /**
  * 表单密码验证过程
@@ -133,8 +136,19 @@ const checkPassword = (password) => {
         // Toast.fail('密码不能少于6位');
         return false;
     }
-    return true
-}
+    return true;
+};
+
+const isNumber = (val) => {
+    let regPos = /^\d+(\.\d+)?$/; //非负浮点数
+    let regNeg = /^(-(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*)))$/; //负浮点数
+    if (regPos.test(val) || regNeg.test(val)) {
+        return true;
+    } else {
+        return false;
+    }
+};
+
 /**
  * 检测字符串是否为空
  * @param s
@@ -145,7 +159,7 @@ const isEmpty = (s) => {
     if (s === null) return true;
     if (s === '') return true;
     return false;
-}
+};
 
 /**
  * 检测字符串是否有中文
@@ -156,12 +170,13 @@ const containsChinese = (input) => {
     if (input) {
         return /.*[\u4e00-\u9fa5]+.*$/.test(input)
     }
-}
+};
+
 /**
-  * Js 数据容量单位转换(kb,mb,gb,tb)
-  * @param bytes
-  * @returns {*}
-  */
+ * Js 数据容量单位转换(kb,mb,gb,tb)
+ * @param bytes
+ * @returns {*}
+ */
 const bytesToSize = (bytes) => {
     if (bytes === 0) return '0 B';
     let k = 1000, // or 1024
@@ -169,22 +184,24 @@ const bytesToSize = (bytes) => {
         i = Math.floor(Math.log(bytes) / Math.log(k));
 
     return (bytes / Math.pow(k, i)).toPrecision(3) + ' ' + sizes[i];
-}
+};
+
 /**
-     *
-     * 以Base64位字符串数据的形式返回一个图片的source
-     * @param data
-     * @returns {{uri: string}}
-     */
+ *
+ * 以Base64位字符串数据的形式返回一个图片的source
+ * @param data
+ * @returns {{uri: string}}
+ */
 const base64Image = (data) => {
     return `data:image/png;base64,${data}`
-}
+};
+
 /**
-     *
-     * 阶乘算法
-     * @param number
-     * @returns number
-     */
+ *
+ * 阶乘算法
+ * @param number
+ * @returns number
+ */
 const factorial = (num) => {
     if (num < 0) {
         return -1;
@@ -193,32 +210,55 @@ const factorial = (num) => {
     } else {
         return (num * factorial(num - 1));
     }
-}
+};
+
 /**
-   * 时间秒数格式化
-   * @param s 时间戳（单位：秒）
-   * @returns {*} 格式化后的时分秒
-   */
+ * 时间秒数格式化
+ * @param s 时间戳（单位：秒）
+ * @returns {*} 格式化后的时分秒
+ */
 const sec_to_time = (seconds) => {
     let arr = [
         parseInt(seconds / 60 / 60),
         parseInt(seconds / 60 % 60),
         parseInt(seconds % 60)
-    ]
+    ];
     return arr.join(":").replace(/\b(\d)\b/g, "0$1");
-}
+};
+
+/**
+ * 时间秒数格式化
+ * @param s 时间戳（单位：秒）
+ * @returns {*} 格式化后的天时分秒
+ */
+const sec_to_time_day = (seconds) => {
+    let h = parseInt(seconds / 60 / 60);
+    let day = 0;
+    if (h > 24) {
+        day = parseInt(h / 24);
+        h = h - day * 24
+    }
+    let arr = [
+        day,
+        h,
+        parseInt(seconds / 60 % 60),
+        parseInt(seconds % 60)
+    ];
+    return arr;
+};
+
 /**
  * 过滤掉false, null, 0, "", undefined, and NaN
- * @param {*} arr 
+ * @param {*} arr
  */
 const bouncer = (arr) => {
     return arr.filter((val) => {
         return !(!val || val === "");
     })
-}
+};
 
-const clearAllTimeout = (array) => {
-    for (let i = 1; i <= array.length; i++) {
+const clearTimer = (array) => {
+    for (let i = 0; i < array.length; i++) {
         let timer = array[i];
         if (timer === 'undefined' || timer === '' || !timer) {
             return;
@@ -226,10 +266,31 @@ const clearAllTimeout = (array) => {
         // console.log(timer);
         return clearTimeout(timer);
     }
-}
+};
+
+const getDeviceInfo = () => {
+    const info = {
+        apiLevel: DeviceInfo.getAPILevel(), // api版本，安卓可用
+        appName: DeviceInfo.getApplicationName(), // app名字
+        brandName: DeviceInfo.getBrand(), // 设备品牌
+        buildNumber: DeviceInfo.getBuildNumber(), // 设备的build版本
+        bundleId: DeviceInfo.getBundleId(), // 设备的BuildID
+        carrier: DeviceInfo.getCarrier(), // 运营商名称
+        deviceCountry: DeviceInfo.getDeviceCountry(), // 设备的国家
+        deviceLocale: DeviceInfo.getDeviceLocale(), // 设备的本地设置
+        settingFontScale: DeviceInfo.getFontScale(), // 设备设置的字体比率
+        diskStorage: DeviceInfo.getFreeDiskStorage(), // 设备的可存储大小
+        systemVersion: DeviceInfo.getSystemVersion(), // 设备的系统版本
+        timezone: DeviceInfo.getTimezone(), // 设备的时区
+        uniqueId: DeviceInfo.getUniqueID(), // 设备的唯一ID
+        appVersion: DeviceInfo.getVersion(), // app的版本
+        isTablet: DeviceInfo.isTablet(), // 是否为平板电脑
+    };
+    return info;
+};
 
 export {
-    ScaleSize,
+    scaleSize,
     fontSize,
     isMobile,
     checkMobile,
@@ -241,5 +302,8 @@ export {
     factorial,
     sec_to_time,
     bouncer,
-    clearAllTimeout
+    isNumber,
+    sec_to_time_day,
+    clearTimer,
+    getDeviceInfo,
 }

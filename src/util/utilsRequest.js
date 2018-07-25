@@ -22,7 +22,7 @@ export default class DataRepository {
      * @param url
      * @returns {Promise}
      */
-    fetchGet(url, print = false) {
+    Get(url, print = false) {
         url = NetApi.base + url;
         return new Promise((resolve, reject) => {
             fetch(url)
@@ -67,7 +67,7 @@ export default class DataRepository {
      * @param data
      * @returns {Promise}
      */
-    fetchPost(url, data, print = false) {
+    Post(url, data, print = false) {
         url = NetApi.base + url;
         return new Promise((resolve, reject) => {
             fetch( url, {

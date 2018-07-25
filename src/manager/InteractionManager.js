@@ -9,7 +9,7 @@ export default {
         const timeout = setTimeout(() => {
             called = true;
             func()
-        }, 600);
+        }, 500);
         InteractionManager.runAfterInteractions(() => {
             if (called) {
                 return;

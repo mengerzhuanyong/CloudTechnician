@@ -1,5 +1,5 @@
 /**
- * 云技师 - App
+ * 云技师 - Test
  * https://menger.me
  * @大梦
  */
@@ -12,18 +12,21 @@ import {
     StyleSheet,
 } from 'react-native'
 
-import './src/constant/Global'
-import Index from './src'
-
-export default class App extends Component {
+export default class Test extends Component {
 
     constructor(props) {
         super(props);
     }
 
+    componentDidMount() {};
+
+    componentWillUnmount() {};
+
     render() {
         return (
-            <Index />
+            <View style={styles.container}>
+                <Text style={styles.textStyle}>Test</Text>
+            </View>
         );
     }
 }
@@ -36,7 +39,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#f60',
     },
     textStyle: {
-    	fontSize: 16,
-    	color: '#fff',
+        fontSize: 16,
+        color: '#fff',
     }
 });
