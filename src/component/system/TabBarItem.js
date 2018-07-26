@@ -1,5 +1,5 @@
 /**
- * 云技师 - TABBARITEM
+ * 云技师 - TabBarItem
  * https://menger.me
  * @大梦
  */
@@ -10,24 +10,13 @@ import {
     View,
     Image,
     StyleSheet,
-    DeviceEventEmitter
 } from 'react-native'
-import NetRequest from '../../util/utilsRequest'
-import NetApi from '../../constant/GlobalApi'
-import { ACTION_NAVGATION } from '../../constant/EventActions'
-import { toastShort, consoleLog } from '../../util/utilsToast'
-import GlobalStyles from '../../constant/GlobalStyle'
-import GlobalIcons from '../../constant/GlobalIcon'
 
 
 export default class TabBarItem extends Component {
 
     constructor(props){
         super(props);
-        this.state = {
-            orderNum: '',
-        }
-        this.netRequest = new NetRequest();
     }
 
     render() {
@@ -36,7 +25,7 @@ export default class TabBarItem extends Component {
             <View style={styles.container}>
                 <Image
                     source = {focused ? selectedImage : normalImage}
-                    style = {[styles.tabBarIcon, focused && {tintColor: GlobalStyles.themeColor}]}
+                    style = {[styles.tabBarIcon, focused && {tintColor: GlobalStyle.themeColor}]}
                 />  
             </View>
         )
@@ -55,4 +44,4 @@ const styles = StyleSheet.create({
         height: 20,
         resizeMode: 'contain'
     }
-})
+});

@@ -15,9 +15,8 @@ export const tabOptions = (params) => {
         title: params.title,
         tabBarIcon: ({focused, tintColor}) => (
             <Image
-                resizeMode="contain"
-                style={[styles.iconStyle]}
-                source={!focused ? params.normalIcon : params.selectedIcon}
+                style={[styles.iconStyle, focused && {tintColor: tintColor || GlobalStyle.themeColor}]}
+                source={focused ? params.selectedIcon : params.normalIcon}
             />
         )
     }
@@ -76,13 +75,6 @@ export const createNavigationContainer = (OldComponent) => {
             this._oldComponentRef = v
         };
 
-        onPushToNextPage = (pageTitle, component, params = {}) => {
-            RouterHelper.navigate(component, {
-                pageTitle: pageTitle,
-                ...params
-            })
-        };
-
         render() {
             return (
                 <OldComponent
@@ -100,5 +92,6 @@ const styles = StyleSheet.create({
     iconStyle: {
         width: ScaleSize(40),
         height: ScaleSize(40),
+        resizeMode: 'contain',
     }
 });
