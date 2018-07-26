@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
     headIcon: {
         width: 24,
         height: 24,
-        tintColor: '#fff',
+        tintColor: '#333',
         resizeMode: 'contain',
     },
     setting_item_container: {

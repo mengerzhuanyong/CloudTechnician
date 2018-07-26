@@ -9,7 +9,7 @@
 
 // 项目中的图片可以通过Images.xxx 获取
 import {Platform, YellowBox} from 'react-native'
-import {scaleSize, fontSize, isMobile, checkMobile, checkPassword, isEmpty, containsChinese, clearTimer} from '../util/utilsTool'
+import * as Tool from '../util/utilsTool'
 import * as Toast from '../util/utilsToast'
 
 import InteractionManager from '../manager/InteractionManager'
@@ -18,6 +18,7 @@ import RouterHelper from '../router/RouterHelper'
 
 import Images from './GlobalImage'
 import GlobalStyle from './GlobalStyle'
+import Constant from './Constant'
 
 import ServicesApi from './GlobalApi'
 import Services from '../util/utilsRequest'
@@ -84,11 +85,17 @@ global.InteractionManager = InteractionManager;
 // 全局的主题和控件的配置以及样式
 global.GlobalStyle = GlobalStyle;
 
+// 全局的主题和控件的配置以及样式
+global.Constant = Constant;
+
 // 适配字体
-global.FontSize = fontSize;
+global.FontSize = Tool.fontSize;
 
 // 屏幕适配
-global.ScaleSize = scaleSize;
+global.ScaleSize = Tool.scaleSize;
 
 // 清楚定时器
-global.ClearTimer = clearTimer;
+global.ClearTimer = Tool.clearTimer;
+
+// 清楚定时器
+global.Tool = Tool;

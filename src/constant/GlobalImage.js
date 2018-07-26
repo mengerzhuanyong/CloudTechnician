@@ -11,18 +11,19 @@ const Images = {
     icon_arrow_down: require('../asset/icon/icon_arrow_down.png'),
     icon_arrow_left: require('../asset/icon/icon_arrow_left.png'),
     icon_arrow_right: require('../asset/icon/icon_arrow_right.png'),
+    icon_bell: require('../asset/icon/icon_bell.png'),
 
     // IMAGES
+    img_logo: require('../asset/img/img_logo.png'),
 
     // TABBARS
-    icon_tabbar_cooperate: require('../asset/tabbar/icon_tabbar_cooperate.png'),
-    icon_tabbar_cooperate_cur: require('../asset/tabbar/icon_tabbar_cooperate_cur.png'),
     icon_tabbar_home: require('../asset/tabbar/icon_tabbar_home.png'),
-    icon_tabbar_home_cur: require('../asset/tabbar/icon_tabbar_home_cur.png'),
     icon_tabbar_mine: require('../asset/tabbar/icon_tabbar_mine.png'),
+    icon_tabbar_forum: require('../asset/tabbar/icon_tabbar_forum.png'),
+    
+    icon_tabbar_home_cur: require('../asset/tabbar/icon_tabbar_home_cur.png'),
     icon_tabbar_mine_cur: require('../asset/tabbar/icon_tabbar_mine_cur.png'),
-    icon_tabbar_order: require('../asset/tabbar/icon_tabbar_order.png'),
-    icon_tabbar_order_cur: require('../asset/tabbar/icon_tabbar_order_cur.png'),
+    icon_tabbar_forum_cur: require('../asset/tabbar/icon_tabbar_forum_cur.png'),
 };
 
 export default Images;

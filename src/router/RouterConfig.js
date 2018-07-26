@@ -10,9 +10,13 @@ import {createStackNavigator, createBottomTabNavigator} from 'react-navigation'
 import StackViewStyleInterpolator from 'react-navigation/src/views/StackView/StackViewStyleInterpolator'
 import {configRouter, tabOptions} from './RouterTool'
 
-import Home from "../page/home/home"
-import Mine from "../page/mine/mine"
-import Login from "../page/login/login"
+import Home from '../page/home/home'
+import Mine from '../page/mine/mine'
+import Forum from '../page/forum/forum'
+
+import Login from '../page/login/login'
+import Register from '../page/login/register'
+import RetrievePassword from '../page/login/retrievePassword'
 
 import CommonWebPage from '../page/common/commonWebPage'
 
@@ -23,6 +27,14 @@ const TabNavigator = createBottomTabNavigator({
             title: '首页',
             normalIcon: Images.icon_tabbar_home,
             selectedIcon: Images.icon_tabbar_home_cur
+        })
+    },
+    Forum: {
+        screen: Forum,
+        navigationOptions: tabOptions({
+            title: '云社区',
+            normalIcon: Images.icon_tabbar_forum,
+            selectedIcon: Images.icon_tabbar_forum_cur
         })
     },
     Mine: {
@@ -40,7 +52,7 @@ const TabNavigator = createBottomTabNavigator({
         indicatorStyle: {height: 0},
         activeTintColor: GlobalStyle.themeColor,
         style: {
-            backgroundColor: "#fff"
+            backgroundColor: '#fff'
         },
         tabStyle: {
             margin: 2,
@@ -49,7 +61,7 @@ const TabNavigator = createBottomTabNavigator({
     lazy: true, //懒加载
     swipeEnabled: false,
     animationEnabled: false, //关闭安卓底栏动画
-    tabBarPosition: "bottom",
+    tabBarPosition: 'bottom',
 });
 
 const StackNavigator = createStackNavigator(configRouter({
@@ -57,8 +69,10 @@ const StackNavigator = createStackNavigator(configRouter({
     CommonWebPage: {screen: CommonWebPage},
 
     Login: {screen: Login},
+    Register: {screen: Register},
+    RetrievePassword: {screen: RetrievePassword},
 }), {
-    initialRouteName: 'Tab',
+    initialRouteName: 'Login',
     cardStyle: {
         shadowOpacity: 0,
         shadowRadius: 0,

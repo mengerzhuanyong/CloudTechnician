@@ -14,6 +14,7 @@ import {
     ScrollView,
     StyleSheet,
 } from 'react-native'
+import NavigationBar from "../../component/system/NavigationBar";
 
 export default class CommonWebPage extends PureComponent {
 
@@ -44,6 +45,16 @@ export default class CommonWebPage extends PureComponent {
         let pageTitle = params && params.pageTitle ? params.pageTitle : '详情页';
         return (
             <View style={styles.container}>
+                <NavigationBar
+                    title={pageTitle}
+                    style={{
+                        backgroundColor: '#fff',
+                    }}
+                    statusBar={{
+                        barStyle: 'dark-content'
+                    }}
+                    titleStyle={{color: '#333'}}
+                />
                 {!loading ?
                     <WebView
                         source={{uri: url}}

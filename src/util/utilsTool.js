@@ -111,12 +111,11 @@ const isMobile = (mobile) => {
  */
 const checkMobile = (mobile) => {
     if (isEmpty(mobile)) {
-        // Toast.fail('请输入手机号');
+        Toast.toastShort('请输入手机号');
         return false;
     }
     if (!isMobile(mobile)) {
-        alert('mobile');
-        // Toast.fail('请输入正确的手机号');
+        Toast.toastShort('请输入正确的手机号');
         return false;
     }
     return true;
@@ -129,11 +128,11 @@ const checkMobile = (mobile) => {
  */
 const checkPassword = (password) => {
     if (isEmpty(password)) {
-        // Toast.fail('请输入密码');
+        Toast.toastShort('请输入密码');
         return false;
     }
-    if (password.length < 6) {
-        // Toast.fail('密码不能少于6位');
+    if (password.length < 4) {
+        Toast.toastShort('密码不能少于4位');
         return false;
     }
     return true;
@@ -263,7 +262,7 @@ const clearTimer = (array) => {
         if (timer === 'undefined' || timer === '' || !timer) {
             return;
         }
-        // console.log(timer);
+        console.log('timer--->', timer);
         return clearTimeout(timer);
     }
 };

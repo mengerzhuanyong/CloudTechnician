@@ -1,5 +1,5 @@
 /**
- * 汇了金融 - CommonLine
+ * 奶牛金服 - CommonLine
  * https://menger.me
  * @大梦
  */
@@ -10,7 +10,7 @@ import {
     StyleSheet,
 } from 'react-native'
 
-import GlobalStyles from '../../constant/GlobalStyle'
+import GlobalStyle from '../../constant/GlobalStyle'
 
 export class VerticalLine extends Component {
 
@@ -42,11 +42,11 @@ export class HorizontalLine extends Component {
 
 const styles = StyleSheet.create({
     verLine: {
-        width: 1,
+        width: GlobalStyle.minPixel,
         backgroundColor: '#f5f5f5'
     },
     horLine: {
-        height: 1,
+        height: GlobalStyle.minPixel,
         backgroundColor: '#f5f5f5'
     },
 });

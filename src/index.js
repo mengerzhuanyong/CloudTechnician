@@ -17,29 +17,33 @@ export default class Index extends React.Component {
     }
 
     componentDidMount() {
-        // this._handleLoginState(); // 处理登陆状态
+        this._handleLoginState(); // 处理登陆状态
     }
 
     componentWillUnmount() {};
 
     _handleLoginState = async () => {
-        const {loginStore} = this.props;
-        const {token} = loginStore.userInfo;
-        const localRes = await StorageManager.load(Constant.USER_INFO_KEY);
-        if (localRes.code === 1) {
-            if (localRes.data.token === undefined || localRes.data.token === '') {
+        const localData = await StorageManager.load(Constant.USER_INFO_KEY);
+        console.log('本地信息--->', localData);
+        if (localData.code === 1) {
+            if (localData.data.token === undefined || localData.data.token === '') {
                 // 未登录
-                // RouterHelper.reset('Login');
+                RouterHelper.reset('', 'Login');
             } else {
                 // 已经登录
-                loginStore.saveUserInfo(localRes.data);
-                RouterHelper.reset('Tab');
+                this.saveUserInfo(localData.data);
+                RouterHelper.reset('', 'Tab');
             }
         } else {
             // 第一次安装app
-            // RouterHelper.reset('Login');
+            RouterHelper.reset('', 'Login');
         }
-        SplashScreen.hide();
+        // SplashScreen.hide();
+    };
+
+    saveUserInfo = (userInfo) => {
+        global.token = userInfo.token;
+        StorageManager.save(Constant.USER_INFO_KEY, userInfo);
     };
 
     render() {

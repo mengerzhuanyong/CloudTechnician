@@ -19,6 +19,9 @@ import {
 import PropTypes from 'prop-types'
 import UtilsView from "../../util/utilsView";
 
+// import GlobalStyle from '../../constant/GlobalStyle'
+// const __IOS__ = Platform.OS === 'ios';
+
 const NAV_BAR_HEIGHT_IOS = GlobalStyle.statusBar_Height_Ios;
 const NAV_BAR_HEIGHT_ANDROID = GlobalStyle.statusBar_Height_Android;
 const STATUS_BAR_HEIGHT = 20;
@@ -68,7 +71,7 @@ export default class NavigationBar extends Component {
 
     static defaultProps = {
         statusBar: {
-            barStyle: 'light-content',
+            barStyle: 'dark-content',
             hidden: false,
             translucent: false,
             animated: false,
@@ -232,7 +235,8 @@ class NavBarButton extends Component {
 const styles = StyleSheet.create({
     container: {
         zIndex: 999,
-        backgroundColor: GlobalStyle.themeColor,
+        // backgroundColor: 'transparent',
+        backgroundColor: '#fff',
     },
     navBar: {
         flexDirection: 'row',
@@ -251,7 +255,7 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 18,
-        color: '#fff',
+        color: '#333',
     },
     navButton: {
         flexDirection: 'row',
@@ -263,10 +267,11 @@ const styles = StyleSheet.create({
     },
     navBtnTitle: {
         fontSize: 16,
-        color: '#fff',
+        color: '#333',
         marginLeft: 10,
     },
     statusBar: {
         height: __IOS__ ? STATUS_BAR_HEIGHT : 0,
+        backgroundColor: 'transparent',
     },
 });

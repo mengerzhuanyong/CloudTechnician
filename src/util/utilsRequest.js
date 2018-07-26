@@ -23,7 +23,7 @@ export default class DataRepository {
      * @returns {Promise}
      */
     Get(url, print = false) {
-        url = NetApi.base + url;
+        url = NetApi.base + url + '?token=' + token;
         return new Promise((resolve, reject) => {
             fetch(url)
                 .then((response) => response.text())
@@ -69,6 +69,10 @@ export default class DataRepository {
      */
     Post(url, data, print = false) {
         url = NetApi.base + url;
+        data = {
+            token,
+            ...data
+        };
         return new Promise((resolve, reject) => {
             fetch( url, {
                     method: 'POST',

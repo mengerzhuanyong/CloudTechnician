@@ -6,19 +6,21 @@
 
 import {
     Platform,
+    PixelRatio,
     Dimensions,
 } from 'react-native'
 
 const __IOS__ = Platform.OS === 'ios';
 const {width, height} = Dimensions.get('window');
-const themeColor = '#292929';
 
-module.exports = {
+const themeColor = '#2c415b';
+
+const GlobalStyle = {
     width: width,
     height: height,
     statusBar_Height_Ios: 44,
     statusBar_Height_Android: 50,
-    __IOS__: __IOS__,
+    minPixel: 1 / PixelRatio.get(),
     rightButton: {
         height: 44,
         minWidth: 35,
@@ -38,6 +40,8 @@ module.exports = {
     themeLightColor: '#719afc',
 
     transparent: 0,
+
+    overNavigationBar: __IOS__ ? -64 : 70,
 
     f_w4: {
         fontWeight: '400'
@@ -100,6 +104,12 @@ module.exports = {
     horLine: {
         height: 1,
         backgroundColor: '#e7e8e9'
+    },
+
+    flexRowBetween: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
     },
 
     bannerContainer: {
@@ -286,3 +296,5 @@ module.exports = {
         color: '#999',
     },
 };
+
+export default GlobalStyle;
