@@ -1,5 +1,5 @@
 /**
- * 速芽物流用户端 - ActivityIndicatorItem
+ * 云技师 - ActivityIndicatorItem
  * https://menger.me
  * @大梦
  */

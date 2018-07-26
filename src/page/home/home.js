@@ -21,7 +21,7 @@ export default class Home extends Component {
     }
 
     async componentDidMount() {
-        let result = await Services.Get(ServicesApi.index)
+        let result = await Services.Get(ServicesApi.index);
         if (result) {
             // Toast.toastShort(result.msg);
         }
@@ -34,9 +34,13 @@ export default class Home extends Component {
             <View style={styles.container}>
                 <NavigationBar
                     title = {'云技师'}
+                    leftButton = {null}
                 />
                 <View style={styles.content}>
-                    <Text style={styles.textStyle}>{ServicesApi.index}</Text>
+                    <Text
+                        style={styles.textStyle}
+                        onPress={() => RouterHelper.navigate('登录', 'Login', {id: '测试一下能不能用'}) }
+                    >{ServicesApi.index}</Text>
                 </View>
             </View>
         );

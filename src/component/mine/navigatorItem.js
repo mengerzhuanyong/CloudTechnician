@@ -1,5 +1,5 @@
 /**
- * 速芽物流用户端 - navigationItem
+ * 云技师 - navigationItem
  * https://menger.me
  * @大梦
  */

@@ -1,10 +1,10 @@
 /**
- * 速芽物流用户端 - ViewUtils
+ * 云技师 - ViewUtils
  * https://menger.me
  * @大梦
  */
 
-'use strict'
+'use strict';
 
 import React  from 'react';
 import {
@@ -15,10 +15,9 @@ import {
     TouchableOpacity,
     TouchableHighlight,
 } from 'react-native';
-import GlobalIcons from '../constant/GlobalIcon'
 
-export default class ViewUtils {
-    
+export default class UtilsView {
+
 
     /**
      * 获取设置页的Item
@@ -34,26 +33,32 @@ export default class ViewUtils {
     static getSettingItem(callBack, icon, text, tintStyle, expandableIco) {
         return (
             <TouchableHighlight
-                onPress = {callBack}
+                onPress={callBack}
             >
                 <View style={[styles.setting_item_container]}>
                     <View style={{alignItems: 'center', flexDirection: 'row'}}>
                         {icon ?
-                            <Image source={icon} style={[{opacity: 1, width: 16, height: 16, marginRight: 10,resizeMode:'stretch'}, tintStyle]} />
+                            <Image source={icon} style={[{
+                                opacity: 1,
+                                width: 16,
+                                height: 16,
+                                marginRight: 10,
+                                resizeMode: 'stretch'
+                            }, tintStyle]}/>
                             :
                             <View style={{opacity: 1, width: 16, height: 16, marginRight: 10,}}/>
                         }
                         <Text>{text}</Text>
                     </View>
                     <Image
-                        source = {expandableIco ? expandableIco : Images.icon_arrow_left}
-                        style = {[styles.settingBtnIcon, tintStyle]}
+                        source={expandableIco ? expandableIco : Images.icon_arrow_left}
+                        style={[styles.settingBtnIcon, tintStyle]}
                     />
                 </View>
             </TouchableHighlight>
         )
     }
-    
+
     /**
      * 左侧导航按钮
      * @Author   Menger
@@ -64,14 +69,14 @@ export default class ViewUtils {
     static getLeftButton = (callBack) => {
         return (
             <TouchableOpacity
-                style = {{padding: 8}}
-                onPress = {callBack}
+                style={{padding: 8}}
+                onPress={callBack}
             >
-                <Image style={{width: 26, height: 26,}} source={Images.icon_arrow_left}/>
+                <Image style={styles.headIcon} source={Images.icon_arrow_left}/>
             </TouchableOpacity>
         )
-    }
-    
+    };
+
     /**
      * 右侧侧导航按钮
      * @Author   Menger
@@ -82,15 +87,15 @@ export default class ViewUtils {
     static getRightButton = (title, callBack) => {
         return (
             <TouchableOpacity
-                style = {{alignItems: 'center',}}
-                onPress = {callBack}
+                style={{alignItems: 'center',}}
+                onPress={callBack}
             >
                 <View style={{marginRight: 10}}>
                     <Text style={{fontSize: 20, color: '#fff',}}>{title}</Text>
                 </View>
             </TouchableOpacity>
         )
-    }
+    };
 
     /**
      * 获取更多按钮
@@ -102,17 +107,17 @@ export default class ViewUtils {
     static getMoreButton = (callBack) => {
         return (
             <TouchableHighlight
-                ref = "moreMenuButton"
-                style = {{padding: 5}}
-                onPress = {callBack}
-                underlayColor = {'transparent'}
+                ref="moreMenuButton"
+                style={{padding: 5}}
+                onPress={callBack}
+                underlayColor={'transparent'}
             >
                 <View style={{paddingRight: 8}}>
-                <Image style={styles.moreMenuBtnIcon} source={Images.icon_arrow_left} />
+                    <Image style={styles.moreMenuBtnIcon} source={Images.icon_arrow_left}/>
                 </View>
             </TouchableHighlight>
         )
-    }
+    };
 
     /**
      * 获取分享按钮
@@ -124,16 +129,22 @@ export default class ViewUtils {
     static getShareButton = (callBack) => {
         return (
             <TouchableHighlight
-                onPress = {callBack}
-                underlayColor = {'transparent'}
+                onPress={callBack}
+                underlayColor={'transparent'}
             >
                 <Image style={styles.shareBtnIcon} source={Images.icon_arrow_left}/>
             </TouchableHighlight>
         )
-    }
-}
+    };
+};
 
 const styles = StyleSheet.create({
+    headIcon: {
+        width: 24,
+        height: 24,
+        tintColor: '#fff',
+        resizeMode: 'contain',
+    },
     setting_item_container: {
         height: 60,
         padding: 10,
@@ -158,6 +169,6 @@ const styles = StyleSheet.create({
         height: 20,
         opacity: 0.9,
         marginRight: 10,
-        tintColor: 'white'
+        tintColor: '#fff'
     },
-})
+});

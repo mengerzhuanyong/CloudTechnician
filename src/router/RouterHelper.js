@@ -35,7 +35,11 @@ class RouterHelper {
         }
     }
     // 最好使用这个
-    static navigate(routeName, params, delay = true) {
+    static navigate(pageTitle, routeName, params, delay = true) {
+        params = {
+            pageTitle,
+            ...params
+        };
         let nowTime = new Date().getTime();
         if ((nowTime - this.lastActionTime) <= this.interval && delay) {
             console.warn('间隔时间内重复点击了');
@@ -64,7 +68,11 @@ class RouterHelper {
         }
     }
 
-    static push(routeName, params, delay = true) {
+    static push(pageTitle, routeName, params, delay = true) {
+        params = {
+            pageTitle,
+            ...params
+        };
         let nowTime = new Date().getTime();
         if ((nowTime - this.lastActionTime) <= this.interval && delay) {
             console.warn('间隔时间内重复点击了');
@@ -90,11 +98,19 @@ class RouterHelper {
         this.navigation.popToTop(params)
     }
 
-    static replace(routeName, params) {
+    static replace(pageTitle, routeName, params) {
+        params = {
+            pageTitle,
+            ...params
+        };
         this.navigation.replace(routeName, params)
     }
 
-    static reset(routeName, params) {
+    static reset(pageTitle, routeName, params) {
+        params = {
+            pageTitle,
+            ...params
+        };
 
         let resetAction = StackActions.reset({
             index: 0,

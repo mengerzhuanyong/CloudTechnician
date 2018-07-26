@@ -1,5 +1,5 @@
 /**
- * 速芽物流用户端 - MineAddressItem
+ * 云技师 - MineAddressItem
  * https://menger.me
  * @大梦
  */

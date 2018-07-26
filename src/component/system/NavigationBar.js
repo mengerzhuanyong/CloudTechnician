@@ -1,5 +1,5 @@
 /**
- * 速芽物流用户端 - NavigationBar
+ * 云技师 - NavigationBar
  * https://menger.me
  * @大梦
  */
@@ -17,6 +17,7 @@ import {
     TouchableOpacity,
 } from 'react-native'
 import PropTypes from 'prop-types'
+import UtilsView from "../../util/utilsView";
 
 const NAV_BAR_HEIGHT_IOS = GlobalStyle.statusBar_Height_Ios;
 const NAV_BAR_HEIGHT_ANDROID = GlobalStyle.statusBar_Height_Android;
@@ -63,7 +64,7 @@ export default class NavigationBar extends Component {
             PropTypes.shape(ButtonShape),
             PropTypes.element,
         ]),
-    }
+    };
 
     static defaultProps = {
         statusBar: {
@@ -72,7 +73,7 @@ export default class NavigationBar extends Component {
             translucent: false,
             animated: false,
         },
-    }
+    };
 
     constructor(props) {
         super(props);
@@ -84,11 +85,11 @@ export default class NavigationBar extends Component {
     }
 
     leftView() {
-        var leftView = this.props.leftButtonTitle ?
+        const leftView = this.props.leftButtonTitle ?
             <Text style={styles.title}>{this.props.leftButtonTitle}</Text> : null;
         return (
             <TouchableOpacity
-                onPress={()=>this.onLeftButtonClick()}>
+                onPress={() => this.onLeftButtonClick()}>
                 <View style={{width: 50, alignItems: 'center', flex: 1, justifyContent: 'center'}}>
                     {this.props.leftView ? this.props.leftView : leftView}
                 </View>
@@ -97,17 +98,27 @@ export default class NavigationBar extends Component {
     }
 
     onLeftButtonClick() {
-        if (this.props.navigator && this.props.popEnabled)this.props.navigator.pop();
-        if (this.props.onLeftButtonClick)this.props.onLeftButtonClick();
+        if (this.props.onLeftButtonClick) {
+            this.props.onLeftButtonClick();
+        } else {
+            RouterHelper.goBack();
+        }
     }
 
-    getButtonElement(data = {}, style) {
+    getButtonElement(type, data = {}, style) {
+        let showLeftBtn = data === {} || data === null || data === undefined;
+        if (type === 'leftBtn' && !showLeftBtn) {
+            data = UtilsView.getLeftButton(() => RouterHelper.goBack());
+        }
+        if (data === null) {
+            return null;
+        }
         return (
             <View style={styles.navBarButton}>
-                {(!!data.props) ? data : (
+                {(data.props) ? data : (
                     <NavBarButton
                         title={data.title}
-                        style={[data.style, style,]}
+                        style={[data.style, style]}
                         tintColor={data.tintColor}
                         disabled={data.disabled}
                         handler={data.handler}
@@ -117,32 +128,68 @@ export default class NavigationBar extends Component {
         );
     }
 
-    render() {
-        let statusBar = !this.props.statusBar.hidden ?
-            <View style={styles.statusBar}>
-                <StatusBar {...this.props.statusBar} barStyle= {this.props.statusBar.barStyle ? this.props.statusBar.barStyle : "light-content"} backgroundColor="transparent"  translucent={true}  style={styles.statusBar}/>
-            </View>: null;
-        let titleView = this.props.titleView ?  this.props.titleView :
-            <Text style={[styles.title,{color:"#fff"},this.props.titleStyle]} ellipsizeMode="tail" numberOfLines={1} >{this.props.title}</Text>;
-        let content = this.props.hide ? null :
-            <View style={styles.navBar}>
-                {/*{this.leftView()}*/}
-                {this.getButtonElement(this.props.leftButton)}
-                <View style={[styles.navBarTitleContainer,this.props.titleLayoutStyle]}>
-                    {titleView}
-                </View>
-                {/*{this.rightView()}*/}
-                <View style={styles.navButton}>
-                    {this.getButtonElement(this.props.rightButton, {})}
-                    {this.getButtonElement(this.props.rightButton2, {})}
-                </View>
-            </View>;
+    renderStatusBar = () => {
+        let {statusBar} = this.props;
+        if (statusBar.hidden) {
+            return null;
+        }
+        let barStyle = statusBar.barStyle ? statusBar.barStyle : 'light-content';
         return (
-            <View style={[styles.container, this.props.style,{paddingTop:Platform.OS=="android"?20:0,},Platform.OS=="ios"?{zIndex:99999}:{}]}>
-                {statusBar}
-                {content}
+            <View style={styles.statusBar}>
+                <StatusBar
+                    {...this.props.statusBar}
+                    translucent={true}
+                    barStyle={barStyle}
+                    style={styles.statusBar}
+                    backgroundColor={'transparent'}
+                />
             </View>
-        )
+        );
+    };
+
+    renderTitleView = () => {
+        let {title, titleView, titleStyle, titleLayoutStyle} = this.props;
+        if (titleView) {
+            return (
+                <View style={[styles.navBarTitleContainer, titleLayoutStyle]}>{titleView}</View>
+            );
+        }
+        return (
+            <View style={[styles.navBarTitleContainer, titleLayoutStyle]}>
+                <Text
+                    numberOfLines={1}
+                    ellipsizeMode={'tail'}
+                    style={[styles.title, titleStyle]}
+                >{title}</Text>
+            </View>
+        );
+
+    };
+
+    renderContent = () => {
+        let {hide, leftButton, rightButton} = this.props;
+        if (hide) {
+            return null;
+        }
+        return (
+            <View style={styles.navBar}>
+                {this.getButtonElement('leftBtn', leftButton)}
+                {this.renderTitleView()}
+                <View style={styles.navButton}>
+                    {this.getButtonElement('rightBtn', rightButton, {})}
+                </View>
+            </View>
+        );
+    };
+
+    render() {
+        let {style} = this.props;
+        return (
+            <View style={[styles.container, style]}>
+                {this.renderStatusBar()}
+                {this.renderContent()}
+            </View>
+        );
     }
 }
 
@@ -166,11 +213,16 @@ class NavBarButton extends Component {
     };
 
     render() {
-        const {style, tintColor, margin, title, handler,disabled} = this.props;
+        const {style, tintColor, title, handler, disabled} = this.props;
+        let status = (disabled === undefined || disabled === null || !disabled) ? false : true;
         return (
-            <TouchableOpacity style={styles.navBarButton} onPress={handler} disabled={(disabled==undefined||disabled==null)?false:(disabled==false ? false : true)}>
+            <TouchableOpacity
+                style={styles.navBarButton}
+                onPress={handler}
+                disabled={status}
+            >
                 <View style={style}>
-                    <Text style={[styles.title, {color: tintColor,marginLeft:10,fontSize:16},]}>{title}</Text>
+                    <Text style={[styles.navBtnTitle, {color: tintColor}]}>{title}</Text>
                 </View>
             </TouchableOpacity>
         );
@@ -179,6 +231,7 @@ class NavBarButton extends Component {
 
 const styles = StyleSheet.create({
     container: {
+        zIndex: 999,
         backgroundColor: GlobalStyle.themeColor,
     },
     navBar: {
@@ -186,20 +239,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',
         height: __IOS__ ? NAV_BAR_HEIGHT_IOS : NAV_BAR_HEIGHT_ANDROID,
-        // backgroundColor: 'red',
-        // shadowOffset:{
-        //     width: 1,
-        //     height: 0.5,
-        // },
-        // shadowColor: '#55ACEE',
-        // shadowOpacity: 0.8,
     },
     navBarTitleContainer: {
         alignItems: 'center',
         justifyContent: 'center',
         position: 'absolute',
-        left: 70,
         top: 0,
+        left: 70,
         right: 70,
         bottom: 0,
     },
@@ -215,7 +261,12 @@ const styles = StyleSheet.create({
     navBarButton: {
         alignItems: 'center',
     },
+    navBtnTitle: {
+        fontSize: 16,
+        color: '#fff',
+        marginLeft: 10,
+    },
     statusBar: {
         height: __IOS__ ? STATUS_BAR_HEIGHT : 0,
     },
-})
+});

@@ -1,5 +1,5 @@
 /**
- * 速芽物流用户端 - MineCouponItem
+ * 云技师 - MineCouponItem
  * https://menger.me
  * @大梦
  */

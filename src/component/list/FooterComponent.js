@@ -1,5 +1,5 @@
 /**
- * 速芽物流用户端 - FooterComponent
+ * 云技师 - FooterComponent
  * https://menger.me
  * @大梦
  */

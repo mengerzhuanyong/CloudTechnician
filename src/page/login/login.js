@@ -12,6 +12,8 @@ import {
     StyleSheet,
 } from 'react-native'
 
+import NavigationBar from '../../component/system/NavigationBar'
+
 export default class Login extends Component {
 
     constructor(props) {
@@ -23,9 +25,19 @@ export default class Login extends Component {
     componentWillUnmount() {};
 
     render() {
+        const {params} = this.props.navigation.state;
+        const pageTitle = params && params.pageTitle ? params.pageTitle : '登录';
         return (
             <View style={styles.container}>
-                <Text style={styles.textStyle}>Login</Text>
+                <NavigationBar
+                    title = {pageTitle}
+                />
+                <View style={styles.content}>
+                    <Text
+                        style={styles.textStyle}
+                        onPress={() => RouterHelper.goBack() }
+                    >{params.id}</Text>
+                </View>
             </View>
         );
     }
@@ -34,9 +46,12 @@ export default class Login extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: '#f60',
+    },
+    content: {
+        flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#f60',
     },
     textStyle: {
         fontSize: 16,

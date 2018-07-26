@@ -1,5 +1,5 @@
 /**
- * 速芽物流用户端 - BANNER
+ * 云技师 - BANNER
  * https://menger.me
  * @大梦
  */
