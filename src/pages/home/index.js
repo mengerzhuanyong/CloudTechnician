@@ -266,7 +266,7 @@ export default class Home extends Component {
                     <TouchableOpacity onPress={() => {
                         // this.toWebview(this.state.notice.notice_url, 'NewsWebDetail')
                     }} style={[styles.gonggao, GlobalStyle.flexRowStart]}>
-                        <Image source={require('../../assets/images/icons/icon_gonggao.png')}
+                        <Image source={Images.icon_gonggao}
                                style={styles.gonggaoimg}/>
                         <Text style={styles.gonggaotext}>新版本即将于5月31日上线</Text>
                     </TouchableOpacity>
@@ -274,7 +274,7 @@ export default class Home extends Component {
                     <View style={GlobalStyle.whiteModule}>
                         <View style={[GlobalStyle.titleModule, GlobalStyle.flexRowBetween]}>
                             <View style={[GlobalStyle.titleLeft, GlobalStyle.flexRowStart]}>
-                                <Image source={require('../../assets/images/icons/icon_index_jijinjingxuan.png')}
+                                <Image source={Images.icon_index_jijinjingxuan}
                                        style={GlobalStyle.titleIcon}/>
                                 <Text style={GlobalStyle.titleText}>工作台</Text>
                             </View>
@@ -282,7 +282,7 @@ export default class Home extends Component {
                                 RouterHelper.navigate('', 'OrderManage')
                             }} style={[GlobalStyle.titleRight, GlobalStyle.flexRowStart]}>
                                 <Text style={GlobalStyle.titleMoreText}>更多</Text>
-                                <Image source={require('../../assets/images/icons/icon_index_more.png')}
+                                <Image source={Images.icon_index_more}
                                        style={GlobalStyle.titleMoreIcon}/>
                             </TouchableOpacity>
                         </View>
@@ -309,7 +309,7 @@ export default class Home extends Component {
                     <View style={GlobalStyle.whiteModule}>
                         <View style={[GlobalStyle.titleModule, GlobalStyle.flexRowBetween]}>
                             <View style={[GlobalStyle.titleLeft, GlobalStyle.flexRowStart]}>
-                                <Image source={require('../../assets/images/icons/icon_peixun.png')}
+                                <Image source={Images.icon_peixun}
                                        style={GlobalStyle.titleIcon}/>
                                 <Text style={GlobalStyle.titleText}>培训内容精选</Text>
                             </View>
@@ -317,7 +317,7 @@ export default class Home extends Component {
                                 RouterHelper.navigate('', 'Fund')
                             }} style={[GlobalStyle.titleRight, GlobalStyle.flexRowStart]}>
                                 <Text style={GlobalStyle.titleMoreText}>更多</Text>
-                                <Image source={require('../../assets/images/icons/icon_index_more.png')}
+                                <Image source={Images.icon_index_more}
                                        style={GlobalStyle.titleMoreIcon}/>
                             </TouchableOpacity>
                         </View>
@@ -327,7 +327,7 @@ export default class Home extends Component {
                     <View style={GlobalStyle.whiteModule}>
                         <View style={[GlobalStyle.titleModule, GlobalStyle.flexRowBetween]}>
                             <View style={[GlobalStyle.titleLeft, GlobalStyle.flexRowStart]}>
-                                <Image source={require('../../assets/images/icons/icon_product.png')}
+                                <Image source={Images.icon_product}
                                        style={GlobalStyle.titleIcon}/>
                                 <Text style={GlobalStyle.titleText}>产品资料精选</Text>
                             </View>
@@ -335,7 +335,7 @@ export default class Home extends Component {
                                 RouterHelper.navigate('', 'Fund')
                             }} style={[GlobalStyle.titleRight, GlobalStyle.flexRowStart]}>
                                 <Text style={GlobalStyle.titleMoreText}>更多</Text>
-                                <Image source={require('../../assets/images/icons/icon_index_more.png')}
+                                <Image source={Images.icon_index_more}
                                        style={GlobalStyle.titleMoreIcon}/>
                             </TouchableOpacity>
                         </View>
@@ -345,7 +345,7 @@ export default class Home extends Component {
                     <View style={GlobalStyle.whiteModule}>
                         <View style={[GlobalStyle.titleModule, GlobalStyle.flexRowBetween]}>
                             <View style={[GlobalStyle.titleLeft, GlobalStyle.flexRowStart]}>
-                                <Image source={require('../../assets/images/icons/icon_goin.png')}
+                                <Image source={Images.icon_goin}
                                        style={GlobalStyle.titleIcon}/>
                                 <Text style={GlobalStyle.titleText}>走进我们</Text>
                             </View>
@@ -353,7 +353,7 @@ export default class Home extends Component {
                                 this.toWebview('http://yuntu.3todo.com/index/article/info/id/3', '', '', 'NewsWebDetail')
                             }} style={[GlobalStyle.titleRight, GlobalStyle.flexRowStart]}>
                                 <Text style={GlobalStyle.titleMoreText}>更多</Text>
-                                <Image source={require('../../assets/images/icons/icon_index_more.png')}
+                                <Image source={Images.icon_index_more}
                                        style={GlobalStyle.titleMoreIcon}/>
                             </TouchableOpacity>
                         </View>
@@ -368,7 +368,7 @@ export default class Home extends Component {
                     {/*<TouchableOpacity style={styles.modalCeng} onPress={() => {*/}
                     {/*this.setModalVisible(false)*/}
                     {/*}}>*/}
-                    {/*<Image source={require('../../assets/images/images/modal.png')} resizeMode="stretch"*/}
+                    {/*<Image source={Images.modal} resizeMode="stretch"*/}
                     {/*style={styles.modalpic}/>*/}
                     {/*</TouchableOpacity>*/}
                     {/*</Modal>*/}
@@ -413,7 +413,7 @@ export default class Home extends Component {
                             </View>
                             <View style={[GlobalStyle.fundBot, GlobalStyle.flexRowBetween]}>
                                 <View style={GlobalStyle.userlistleft}>
-                                    <Image source={require('../../assets/images/icons/icon_shoucang_item.png')} style={styles.icon} />
+                                    <Image source={Images.icon_shoucang_item} style={styles.icon} />
                                 </View>
                                 <View style={GlobalStyle.userlistright}>
                                     <Text style={GlobalStyle.userlisttext}>{data[i].views}</Text>
@@ -442,14 +442,14 @@ export default class Home extends Component {
                         }} style={GlobalStyle.fundList}>
                             <View style={[GlobalStyle.fundTop, GlobalStyle.flexRowBetween]}>
                                 <Text style={GlobalStyle.fundTitle}>{data[i].title}</Text>
-                                <Image source={require('../../assets/images/images/image_index_mohu1.png')}
+                                <Image source={Images.image_index_mohu1}
                                        style={GlobalStyle.fundMohu1}/>
                             </View>
                             <View style={GlobalStyle.fundMid}>
                                 <Image source={{uri: data[i].photo}} style={GlobalStyle.fundThumb}/>
                             </View>
                             <View style={[GlobalStyle.fundBot, GlobalStyle.flexRowBetween]}>
-                                <Image source={require('../../assets/images/images/image_index_mohu.png')}
+                                <Image source={Images.image_index_mohu}
                                        style={GlobalStyle.fundMohu}/>
                             </View>
                         </TouchableOpacity>
@@ -467,7 +467,7 @@ export default class Home extends Component {
         }
     }
 
-//{/*<Image source={require('../../assets/images/images/images_index_video.png')} style={GlobalStyle.videoImg} />*/}
+//{/*<Image source={Images.images_index_video} style={GlobalStyle.videoImg} />*/}
     homeAbout(data) {
         let aboutList = [];
         for (var i = 0; i < data.length; i++) {

@@ -1,5 +1,5 @@
 /**
- * 云技师 - Mine
+ * 云技师 - MemberCenter
  * https://menger.me
  * @大梦
  */
@@ -14,7 +14,7 @@ import {
 import {ListRow} from "teaset";
 import NavigationBar from "../../component/system/NavigationBar";
 
-export default class Mine extends Component {
+export default class MemberCenter extends Component {
 
     constructor(props) {
         super(props);
@@ -27,78 +27,43 @@ export default class Mine extends Component {
     };
 
     render() {
+        const {params} = this.props.navigation.state;
+        const pageTitle = params && params.pageTitle ? params.pageTitle : '会员中心';
         return (
             <View style={styles.container}>
                 <NavigationBar
-                    style={{
-                        backgroundColor: GlobalStyle.themeColor,
-                    }}
-                    leftButton={null}
+                    title={pageTitle}
                 />
                 <ScrollView style={styles.content}>
-                    <View style={styles.userInfoView}>
-                        <View style={styles.userAvatarView}>
-                            <Image source={Images.icon_user_touxiang} style={styles.userAvatarIcon}/>
-                        </View>
-                        <View style={styles.userInfoCon}>
-                            <View style={styles.userInfoItem}>
-                                <Text style={styles.userInfoName}>{'global.user.userData.nickname'}</Text>
-                            </View>
-                            <View style={styles.userInfoItem}>
-                                <Text style={[styles.userInfoName, styles.userInfoText]}>等级: 技师</Text>
-                            </View>
-                        </View>
-                    </View>
                     <View style={styles.contentItem}>
                         <ListRow
                             icon={Images.icon_bell}
-                            title={'会员中心'}
-                            // detail={'更多'}
+                            title={'个人信息'}
                             titleStyle={styles.contentItemTitle}
                             bottomSeparator={'full'}
-                            onPress={() => RouterHelper.navigate('会员中心', 'MemberCenter')}
+                            onPress={() => RouterHelper.navigate('个人信息', '')}
                         />
                         <ListRow
                             icon={Images.icon_bell}
-                            title={'我的资产'}
-                            // detail={'更多'}
+                            title={'银行卡管理'}
                             titleStyle={styles.contentItemTitle}
                             bottomSeparator={'full'}
-                            onPress={() => RouterHelper.navigate('我的资产', 'MineAssets')}
+                            onPress={() => RouterHelper.navigate('银行卡管理', '')}
                         />
                         <ListRow
                             icon={Images.icon_bell}
-                            title={'订单管理'}
-                            // detail={'更多'}
+                            title={'修改密码'}
                             titleStyle={styles.contentItemTitle}
                             bottomSeparator={'full'}
-                            onPress={() => RouterHelper.navigate('订单管理', 'Order')}
+                            onPress={() => RouterHelper.navigate('修改密码', '')}
                         />
                         <ListRow
                             icon={Images.icon_bell}
-                            title={'日期管理'}
+                            title={'关于我们'}
                             // detail={'更多'}
                             titleStyle={styles.contentItemTitle}
                             bottomSeparator={'none'}
-                            onPress={() => RouterHelper.navigate('日期管理', 'MineDate')}
-                        />
-                    </View>
-                    <View style={styles.contentItem}>
-                        <ListRow
-                            icon={Images.icon_bell}
-                            title={'我的收藏'}
-                            // detail={'更多'}
-                            titleStyle={styles.contentItemTitle}
-                            bottomSeparator={'full'}
-                            onPress={() => RouterHelper.navigate('我的收藏', 'MineCollect')}
-                        />
-                        <ListRow
-                            icon={Images.icon_bell}
-                            title={'设置'}
-                            // detail={'更多'}
-                            titleStyle={styles.contentItemTitle}
-                            bottomSeparator={'none'}
-                            onPress={() => RouterHelper.navigate('设置', 'Setting')}
+                            onPress={() => RouterHelper.navigate('关于我们', 'CommonWebPage', {url: ''})}
                         />
                     </View>
                 </ScrollView>

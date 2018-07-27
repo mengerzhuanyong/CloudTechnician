@@ -154,7 +154,6 @@ export default class Home extends Component {
         return (
             <View style={styles.container}>
                 <NavigationBar
-
                     style={{
                         backgroundColor: 'transparent',
                     }}

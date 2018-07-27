@@ -96,7 +96,7 @@ export default class Leijishouyi extends Component {
                 <TouchableOpacity onPress={() => {RouterHelper.navigate('', 'OrderRenshengouDetail', item.order_id)}} style={styles.orderTop}>
                     <View style={[styles.orderInfo, GlobalStyle.flexRowBetween]}>
                         <View style={[styles.orderCreate, GlobalStyle.flexRowStart]}>
-                            <Image source={require('../../assets/images/icons/icon_rili.png')} style={styles.orderCreateIco} />
+                            <Image source={Images.icon_rili} style={styles.orderCreateIco} />
                             <Text style={styles.orderCreateText}>{item.create_time}</Text>
                         </View>
                         <Text style={styles.orderStatus}>收益：<Text style={{color: GlobalStyle.themeColor}}>{item.clear_money}元</Text></Text>

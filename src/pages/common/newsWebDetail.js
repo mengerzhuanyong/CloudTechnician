@@ -99,11 +99,11 @@ export default class NewsWebDetail extends Component {
                     rightButton={
                         this.state.is_collection === 0 ?
                         <TouchableOpacity onPress={()=>{this.onCollect()}} style={styles.botLeft}>
-                            <Image source={require('../../assets/images/icons/icon_shoucang_cur.png')} style={[styles.botLeftIco, {width: 24}]} />
+                            <Image source={Images.icon_shoucang_cur} style={[styles.botLeftIco, {width: 24}]} />
                         </TouchableOpacity>
                         :
                         <TouchableOpacity onPress={()=>{this.onCollect()}} style={styles.botLeft}>
-                            <Image source={require('../../assets/images/icons/icon_shoucang.png')} style={[styles.botLeftIco, {width: 24}]} />
+                            <Image source={Images.icon_shoucang} style={[styles.botLeftIco, {width: 24}]} />
                         </TouchableOpacity>}
                 />
                 <StatusBar

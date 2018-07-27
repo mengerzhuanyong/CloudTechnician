@@ -210,7 +210,7 @@ export default class RenzhengType extends Component {
                             <Text style={styles.typeText}>非特殊投资者</Text>
                             {this.state.typeActive === 0 ?
                                 <View style={[styles.typeRadio, styles.typeRadioActive]}>
-                                    <Image source={require('../../assets/images/icons/icon_gouxuan.png')} style={[styles.gouxuanIco]} />
+                                    <Image source={Images.icon_gouxuan} style={[styles.gouxuanIco]} />
                                 </View>
                             :
                                 <View style={styles.typeRadio}></View>
@@ -220,7 +220,7 @@ export default class RenzhengType extends Component {
                             <Text style={styles.typeText}>社保基金、企业年金等</Text>
                             {this.state.typeActive === 1 ?
                                 <View style={[styles.typeRadio, styles.typeRadioActive]}>
-                                    <Image source={require('../../assets/images/icons/icon_gouxuan.png')} style={[styles.gouxuanIco]} />
+                                    <Image source={Images.icon_gouxuan} style={[styles.gouxuanIco]} />
                                 </View>
                             :
                                 <View style={styles.typeRadio}></View>
@@ -230,7 +230,7 @@ export default class RenzhengType extends Component {
                             <Text style={styles.typeText}>依法设立并在中国基金业协会备案的投资计划</Text>
                             {this.state.typeActive === 2 ?
                                 <View style={[styles.typeRadio, styles.typeRadioActive]}>
-                                    <Image source={require('../../assets/images/icons/icon_gouxuan.png')} style={[styles.gouxuanIco]} />
+                                    <Image source={Images.icon_gouxuan} style={[styles.gouxuanIco]} />
                                 </View>
                             :
                                 <View style={styles.typeRadio}></View>
@@ -240,7 +240,7 @@ export default class RenzhengType extends Component {
                             <Text style={styles.typeText}>创元汇及其从业人员</Text>
                             {this.state.typeActive === 3 ?
                                 <View style={[styles.typeRadio, styles.typeRadioActive]}>
-                                    <Image source={require('../../assets/images/icons/icon_gouxuan.png')} style={[styles.gouxuanIco]} />
+                                    <Image source={Images.icon_gouxuan} style={[styles.gouxuanIco]} />
                                 </View>
                             :
                                 <View style={styles.typeRadio}></View>
@@ -250,7 +250,7 @@ export default class RenzhengType extends Component {
                             <Text style={styles.typeText}>中国证监会特殊规定的机构及个人</Text>
                             {this.state.typeActive === 4 ?
                                 <View style={[styles.typeRadio, styles.typeRadioActive]}>
-                                    <Image source={require('../../assets/images/icons/icon_gouxuan.png')} style={[styles.gouxuanIco]} />
+                                    <Image source={Images.icon_gouxuan} style={[styles.gouxuanIco]} />
                                 </View>
                             :
                                 <View style={styles.typeRadio}></View>

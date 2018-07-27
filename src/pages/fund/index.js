@@ -184,7 +184,7 @@ export default class Fund extends Component {
 
                 <View style={[GlobalStyle.fundBot, GlobalStyle.flexRowBetween]}>
                     <View style={GlobalStyle.userlistleft}>
-                        <Image source={require('../../assets/images/icons/icon_shoucang_item.png')} style={styles.icon} />
+                        <Image source={Images.icon_shoucang_item} style={styles.icon} />
                     </View>
                     <View style={GlobalStyle.userlistright}>
                         <Text style={GlobalStyle.userlisttext}>{item.views}</Text>
@@ -313,13 +313,13 @@ export default class Fund extends Component {
                         <TouchableOpacity onPress={() => {
                             this.paixu()
                         }} style={styles.topLeft}>
-                            <Image source={require('../../assets/images/icons/icon_paixu.png')}
+                            <Image source={Images.icon_paixu}
                                    style={styles.topLeftIco}/>
                             <Text style={styles.topLeftText}>排序</Text>
                         </TouchableOpacity>
                         :
                         <View style={styles.topLeft}>
-                            <Image source={require('../../assets/images/icons/icon_paixu.png')}
+                            <Image source={Images.icon_paixu}
                                    style={styles.topLeftIco}/>
                             <Text style={styles.topLeftText}>排序</Text>
                         </View>
@@ -329,13 +329,13 @@ export default class Fund extends Component {
                         <TouchableOpacity onPress={() => {
                             // this.shaixuan()
                         }} style={styles.topLeft}>
-                            <Image source={require('../../assets/images/icons/icon_shaixuan.png')}
+                            <Image source={Images.icon_shaixuan}
                                    style={styles.topLeftIco}/>
                             <Text style={styles.topLeftText}>筛选</Text>
                         </TouchableOpacity>
                         :
                         <View style={styles.topLeft}>
-                            <Image source={require('../../assets/images/icons/icon_shaixuan.png')}
+                            <Image source={Images.icon_shaixuan}
                                    style={styles.topLeftIco}/>
                             <Text style={styles.topLeftText}>筛选</Text>
                         </View>
@@ -388,7 +388,7 @@ export default class Fund extends Component {
         } else {
             return (
                 <View style={styles.fundLogin}>
-                    <Image source={require('../../assets/images/images/image_fund_login.png')}
+                    <Image source={Images.image_fund_login}
                            style={styles.fundLoginImg}/>
                     <TouchableOpacity onPress={() => {
                         RouterHelper.navigate('', 'Login')

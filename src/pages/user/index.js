@@ -146,7 +146,7 @@ export default class User extends Component {
                         {global.user.userData.head_img ?
                             <Image source={{uri: global.user.userData.head_img}} style={styles.userPhotoIcon} />
                             :
-                            <Image source={require('../../assets/images/icons/icon_user_touxiang.png')} style={styles.userPhotoIcon} />
+                            <Image source={Images.icon_user_touxiang} style={styles.userPhotoIcon} />
                         }
                         <View>
                             <View style={{flexDirection:'row'}}>
@@ -170,34 +170,34 @@ export default class User extends Component {
                         RouterHelper.navigate('', 'Huiyuan')
                     }} style={GlobalStyle.userlist}>
                         <View style={GlobalStyle.userlistleft}>
-                            <Image source={require('../../assets/images/icons/icon_user_huiyuan.png')}
+                            <Image source={Images.icon_user_huiyuan}
                                    style={GlobalStyle.usericon}/>
                         </View>
                         <View style={GlobalStyle.userlistright}>
                             <Text style={GlobalStyle.userlisttext}>会员中心</Text>
-                            <Image source={require('../../assets/images/icons/icon_user_arrow.png')}
+                            <Image source={Images.icon_user_arrow}
                                    style={GlobalStyle.userlistmore}/>
                         </View>
                     </TouchableOpacity>
                     {/*<TouchableOpacity onPress={() => {RouterHelper.navigate('', 'Jijin')}} style={[GlobalStyle.userlist, GlobalStyle.hide]}>*/}
                     {/*<View style={GlobalStyle.userlistleft}>*/}
-                    {/*<Image source={require('../../assets/images/icons/icon_jinjinrengou.png')} style={GlobalStyle.usericon} />*/}
+                    {/*<Image source={Images.icon_jinjinrengou} style={GlobalStyle.usericon} />*/}
                     {/*</View>*/}
                     {/*<View style={GlobalStyle.userlistright}>*/}
                     {/*<Text style={GlobalStyle.userlisttext}>我的基金</Text>*/}
-                    {/*<Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />*/}
+                    {/*<Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />*/}
                     {/*</View>*/}
                     {/*</TouchableOpacity>*/}
                     <TouchableOpacity onPress={() => {
                         RouterHelper.navigate('', 'Zichan')
                     }} style={GlobalStyle.userlist}>
                         <View style={GlobalStyle.userlistleft}>
-                            <Image source={require('../../assets/images/icons/icon_user_zichan.png')}
+                            <Image source={Images.icon_user_zichan}
                                    style={GlobalStyle.usericon}/>
                         </View>
                         <View style={GlobalStyle.userlistright}>
                             <Text style={GlobalStyle.userlisttext}>我的资产</Text>
-                            <Image source={require('../../assets/images/icons/icon_user_arrow.png')}
+                            <Image source={Images.icon_user_arrow}
                                    style={GlobalStyle.userlistmore}/>
                         </View>
                     </TouchableOpacity>
@@ -206,12 +206,12 @@ export default class User extends Component {
                         RouterHelper.navigate('', 'OrderManage')
                     }} style={GlobalStyle.userlist}>
                         <View style={GlobalStyle.userlistleft}>
-                            <Image source={require('../../assets/images/icons/icon_user_order.png')}
+                            <Image source={Images.icon_user_order}
                                    style={GlobalStyle.usericon}/>
                         </View>
                         <View style={GlobalStyle.userlistright}>
                             <Text style={GlobalStyle.userlisttext}>订单管理</Text>
-                            <Image source={require('../../assets/images/icons/icon_user_arrow.png')}
+                            <Image source={Images.icon_user_arrow}
                                    style={GlobalStyle.userlistmore}/>
                         </View>
                     </TouchableOpacity>
@@ -220,13 +220,13 @@ export default class User extends Component {
                         RouterHelper.navigate('', "DateManage")
                     }} style={GlobalStyle.userlist}>
                         <View style={GlobalStyle.userlistleft}>
-                            <Image source={require('../../assets/images/icons/icon_user_zichan.png')}
+                            <Image source={Images.icon_user_zichan}
                                    style={GlobalStyle.usericon}/>
                         </View>
                         <View style={GlobalStyle.userlistright}>
                             <Text style={GlobalStyle.userlisttext}>日期管理</Text>
                             <Text style={styles.userlistRightText}>{this.state.time}</Text>
-                            <Image source={require('../../assets/images/icons/icon_user_arrow.png')}
+                            <Image source={Images.icon_user_arrow}
                                    style={GlobalStyle.userlistmore}/>
                         </View>
                     </TouchableOpacity>
@@ -246,12 +246,12 @@ export default class User extends Component {
                         RouterHelper.navigate('', 'Shoucang')
                     }} style={GlobalStyle.userlist}>
                         <View style={GlobalStyle.userlistleft}>
-                            <Image source={require('../../assets/images/icons/icon_user_shoucang.png')}
+                            <Image source={Images.icon_user_shoucang}
                                    style={GlobalStyle.usericon}/>
                         </View>
                         <View style={GlobalStyle.userlistright}>
                             <Text style={GlobalStyle.userlisttext}>我的收藏</Text>
-                            <Image source={require('../../assets/images/icons/icon_user_arrow.png')}
+                            <Image source={Images.icon_user_arrow}
                                    style={GlobalStyle.userlistmore}/>
                         </View>
                     </TouchableOpacity>
@@ -259,12 +259,12 @@ export default class User extends Component {
                         RouterHelper.navigate('', 'Setting')
                     }} style={GlobalStyle.userlist}>
                         <View style={GlobalStyle.userlistleft}>
-                            <Image source={require('../../assets/images/icons/icon_user_guanyu.png')}
+                            <Image source={Images.icon_user_guanyu}
                                    style={GlobalStyle.usericon}/>
                         </View>
                         <View style={GlobalStyle.userlistright}>
                             <Text style={GlobalStyle.userlisttext}>设置</Text>
-                            <Image source={require('../../assets/images/icons/icon_user_arrow.png')}
+                            <Image source={Images.icon_user_arrow}
                                    style={GlobalStyle.userlistmore}/>
                         </View>
                     </TouchableOpacity>

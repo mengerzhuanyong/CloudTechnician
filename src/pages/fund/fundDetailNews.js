@@ -83,7 +83,7 @@ export default class FundDetailNews extends Component {
         let url = item.notice_url;
         return (
             <TouchableOpacity onPress={() => {this.toWebview(item.title, item.id, url, 'NewsWebDetail')}} style={[styles.gonggaoList, GlobalStyle.flexRowStart]}>
-                <Image source={require('../../assets/images/icons/icon_fund_xieyi.png')} style={styles.gonggaoico} />
+                <Image source={Images.icon_fund_xieyi} style={styles.gonggaoico} />
                 <Text style={styles.gonggaotext} >{item.title}</Text>
             </TouchableOpacity>
         )

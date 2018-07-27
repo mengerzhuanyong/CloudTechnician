@@ -267,11 +267,11 @@ export default class FundDetail extends Component {
                     leftButton = {UtilsView.getLeftBlackButton(() => this.onBack())}
                     rightButton = {this.state.is_collection === 0 ?
                         <TouchableOpacity onPress={()=>{this.onCollect()}} style={styles.botLeft}>
-                            <Image source={require('../../assets/images/icons/icon_shoucang_cur.png')} style={[styles.botLeftIco, {width: 24*109/100}]} />
+                            <Image source={Images.icon_shoucang_cur} style={[styles.botLeftIco, {width: 24*109/100}]} />
                         </TouchableOpacity>
                         :
                         <TouchableOpacity onPress={()=>{this.onCollect()}} style={styles.botLeft}>
-                            <Image source={require('../../assets/images/icons/icon_shoucang.png')} style={[styles.botLeftIco, {width: 24*109/100}]} />
+                            <Image source={Images.icon_shoucang} style={[styles.botLeftIco, {width: 24*109/100}]} />
                         </TouchableOpacity>
                     }
                 />
@@ -356,17 +356,17 @@ export default class FundDetail extends Component {
                 <View style={styles.botBar}>
                     {this.state.is_collection === 0 ?
                         <TouchableOpacity onPress={()=>{this.onCollect()}} style={styles.botLeft}>
-                            <Image source={require('../../assets/images/icons/icon_shoucang_cur.png')} style={[styles.botLeftIco, {width: 24*109/100}]} />
+                            <Image source={Images.icon_shoucang_cur} style={[styles.botLeftIco, {width: 24*109/100}]} />
                             <Text style={styles.botLeftText}>添加收藏</Text>
                         </TouchableOpacity>
                         :
                         <TouchableOpacity onPress={()=>{this.onCollect()}} style={styles.botLeft}>
-                            <Image source={require('../../assets/images/icons/icon_shoucang.png')} style={[styles.botLeftIco, {width: 24*109/100}]} />
+                            <Image source={Images.icon_shoucang} style={[styles.botLeftIco, {width: 24*109/100}]} />
                             <Text style={styles.botLeftText}>添加收藏</Text>
                         </TouchableOpacity>
                     }
                     <TouchableOpacity onPress={()=>{RouterHelper.navigate('', 'Jisuanqi')}} style={styles.botLeft}>
-                        <Image source={require('../../assets/images/icons/icon_shouyi.png')} style={[styles.botLeftIco, {width: 24*96/100}]} />
+                        <Image source={Images.icon_shouyi} style={[styles.botLeftIco, {width: 24*96/100}]} />
                         <Text style={styles.botLeftText}>收益计算</Text>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={()=>{RouterHelper.navigate('', 'Renshengou')}} style={styles.botRight}>

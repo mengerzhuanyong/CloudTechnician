@@ -79,10 +79,6 @@ export default class Login extends Component {
                     style={{
                         backgroundColor: GlobalStyle.bgColor,
                     }}
-                    statusBar={{
-                        barStyle: 'dark-content'
-                    }}
-                    titleStyle={{color: '#333'}}
                     leftButton={null}
                 />
                 <View style={styles.loginWrap}>

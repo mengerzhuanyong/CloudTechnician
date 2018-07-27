@@ -168,7 +168,7 @@ export default class Zichan extends Component {
                     {/*<View style={GlobalStyle.whiteModule}>*/}
                     {/*<View style={[GlobalStyle.titleModule, GlobalStyle.flexRowBetween]}>*/}
                     {/*<View style={[GlobalStyle.titleLeft, GlobalStyle.flexRowStart]}>*/}
-                    {/*<Image source={require('../../assets/images/icons/icon_jinjinrengou.png')}*/}
+                    {/*<Image source={Images.icon_jinjinrengou}*/}
                     {/*style={styles.titleIcon}/>*/}
                     {/*<Text style={GlobalStyle.titleText}>我的基金</Text>*/}
                     {/*</View>*/}

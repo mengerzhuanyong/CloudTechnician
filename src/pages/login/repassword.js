@@ -216,12 +216,12 @@ export default class Repassword extends Component {
                             <Text style={styles.topTitlea}>找回密码</Text>
                         </View>
                         <TouchableOpacity onPress={() => {this.onBack()}} style={styles.loginback}>
-                            <Image source={require('../../assets/images/icons/icon_angle_left_grey.png')} style={styles.loginbackico} />
+                            <Image source={Images.icon_angle_left_grey} style={styles.loginbackico} />
                         </TouchableOpacity>
                     </View>
                     <View style={styles.loginwrap}>
                         <View style={styles.loginlogo}>
-                            <Image source={require('../../assets/images/images/image_login_logo.png')} style={styles.loginlogoico} />
+                            <Image source={Images.image_login_logo} style={styles.loginlogoico} />
                         </View>
                         <View style={styles.mcell}>
                             <View style={styles.cellItem}>

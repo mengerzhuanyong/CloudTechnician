@@ -236,11 +236,11 @@ export default class Shuhui extends Component {
                     <View style={[GlobalStyle.whiteModule, {marginTop: 10}]}>
                         <TouchableOpacity onPress = {() => {RouterHelper.navigate('', 'Yinhangka')}} style={GlobalStyle.userlist}>
                             <View style={GlobalStyle.userlistleft}>
-                                <Image source={require('../../assets/images/icons/icon_member_yinhangka.png')} style={GlobalStyle.usericon} />
+                                <Image source={Images.icon_member_yinhangka} style={GlobalStyle.usericon} />
                             </View>
                             <View style={GlobalStyle.userlistright}>
                                 <Text style={GlobalStyle.userlisttext}>查看银行卡信息</Text>
-                                <Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />
+                                <Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />
                             </View>
                         </TouchableOpacity>
                     </View>

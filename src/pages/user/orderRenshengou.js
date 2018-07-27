@@ -231,7 +231,7 @@ export default class OrderRenshengou extends Component {
                     <TouchableOpacity onPress={() => {RouterHelper.navigate('', 'OrderRenshengouDetail', item.id, thisStatus)}} style={styles.orderTop}>
                         <View style={[styles.orderInfo, GlobalStyle.flexRowBetween]}>
                             <View style={[styles.orderCreate, GlobalStyle.flexRowStart]}>
-                                <Image source={require('../../assets/images/icons/icon_rili.png')} style={styles.orderCreateIco} />
+                                <Image source={Images.icon_rili} style={styles.orderCreateIco} />
                                 <Text style={styles.orderCreateText}>{item.create_time}</Text>
                             </View>
                             <Text style={styles.orderStatus}>{item.status_msg}</Text>
@@ -258,7 +258,7 @@ export default class OrderRenshengou extends Component {
                     <TouchableOpacity onPress={() => {RouterHelper.navigate('', 'OrderRenshengouDetail', item.id, thisStatus)}} style={styles.orderTop}>
                         <View style={[styles.orderInfo, GlobalStyle.flexRowBetween]}>
                             <View style={[styles.orderCreate, GlobalStyle.flexRowStart]}>
-                                <Image source={require('../../assets/images/icons/icon_rili.png')} style={styles.orderCreateIco} />
+                                <Image source={Images.icon_rili} style={styles.orderCreateIco} />
                                 <Text style={styles.orderCreateText}>{item.create_time}</Text>
                             </View>
                             <Text style={styles.orderStatus}>{item.status_msg}</Text>
@@ -277,7 +277,7 @@ export default class OrderRenshengou extends Component {
                     <TouchableOpacity onPress={() => {RouterHelper.navigate('', 'OrderRenshengouDetail', item.id, thisStatus)}} style={styles.orderTop}>
                         <View style={[styles.orderInfo, GlobalStyle.flexRowBetween]}>
                             <View style={[styles.orderCreate, GlobalStyle.flexRowStart]}>
-                                <Image source={require('../../assets/images/icons/icon_rili.png')} style={styles.orderCreateIco} />
+                                <Image source={Images.icon_rili} style={styles.orderCreateIco} />
                                 <Text style={styles.orderCreateText}>{item.create_time}</Text>
                             </View>
                             <Text style={styles.orderStatus}>{item.status_msg}</Text>
@@ -301,7 +301,7 @@ export default class OrderRenshengou extends Component {
                     <TouchableOpacity onPress={() => {RouterHelper.navigate('', 'OrderRenshengouDetail', item.id, thisStatus)}} style={styles.orderTop}>
                         <View style={[styles.orderInfo, GlobalStyle.flexRowBetween]}>
                             <View style={[styles.orderCreate, GlobalStyle.flexRowStart]}>
-                                <Image source={require('../../assets/images/icons/icon_rili.png')} style={styles.orderCreateIco} />
+                                <Image source={Images.icon_rili} style={styles.orderCreateIco} />
                                 <Text style={styles.orderCreateText}>{item.create_time}</Text>
                             </View>
                             <Text style={styles.orderStatus}>{item.status_msg}</Text>
@@ -320,7 +320,7 @@ export default class OrderRenshengou extends Component {
                     <TouchableOpacity onPress={() => {RouterHelper.navigate('', 'OrderRenshengouDetail', item.id, thisStatus)}} style={styles.orderTop}>
                         <View style={[styles.orderInfo, GlobalStyle.flexRowBetween]}>
                             <View style={[styles.orderCreate, GlobalStyle.flexRowStart]}>
-                                <Image source={require('../../assets/images/icons/icon_rili.png')} style={styles.orderCreateIco} />
+                                <Image source={Images.icon_rili} style={styles.orderCreateIco} />
                                 <Text style={styles.orderCreateText}>{item.create_time}</Text>
                             </View>
                             <Text style={styles.orderStatus}>{item.status_msg}</Text>
@@ -339,7 +339,7 @@ export default class OrderRenshengou extends Component {
                     <TouchableOpacity onPress={() => {RouterHelper.navigate('', 'OrderRenshengouDetail', item.id, thisStatus)}} style={styles.orderTop}>
                         <View style={[styles.orderInfo, GlobalStyle.flexRowBetween]}>
                             <View style={[styles.orderCreate, GlobalStyle.flexRowStart]}>
-                                <Image source={require('../../assets/images/icons/icon_rili.png')} style={styles.orderCreateIco} />
+                                <Image source={Images.icon_rili} style={styles.orderCreateIco} />
                                 <Text style={styles.orderCreateText}>{item.create_time}</Text>
                             </View>
                             <Text style={styles.orderStatus}>{item.status_msg}</Text>
@@ -358,7 +358,7 @@ export default class OrderRenshengou extends Component {
                     <TouchableOpacity onPress={() => {RouterHelper.navigate('', 'OrderRenshengouDetail', item.id, thisStatus)}} style={styles.orderTop}>
                         <View style={[styles.orderInfo, GlobalStyle.flexRowBetween]}>
                             <View style={[styles.orderCreate, GlobalStyle.flexRowStart]}>
-                                <Image source={require('../../assets/images/icons/icon_rili.png')} style={styles.orderCreateIco} />
+                                <Image source={Images.icon_rili} style={styles.orderCreateIco} />
                                 <Text style={styles.orderCreateText}>{item.create_time}</Text>
                             </View>
                             <Text style={styles.orderStatus}>{item.status_msg}</Text>

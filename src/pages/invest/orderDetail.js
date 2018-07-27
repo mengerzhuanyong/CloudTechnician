@@ -265,7 +265,7 @@ export default class OrderDetail extends Component {
                                             <Image source={{uri:this.state.photo_list[0].img_url}} style={{borderColor:'#BEBEBE',borderRadius:5,borderWidth:1,textAlign:'center',width:80,height:80}} />
                                             :
                                             <TouchableOpacity onPress={()=>this.setPhoto(0)}>
-                                                <Image source={require('../../assets/images/images/picAdd.png')}style={{borderColor:'#BEBEBE',borderRadius:5,borderWidth:1,textAlign:'center',width:80,height:80}} />
+                                                <Image source={Images.picAdd}style={{borderColor:'#BEBEBE',borderRadius:5,borderWidth:1,textAlign:'center',width:80,height:80}} />
                                             </TouchableOpacity>
                                     }
                                     {
@@ -273,7 +273,7 @@ export default class OrderDetail extends Component {
                                             <Image source={{uri:this.state.photo_list[1].img_url}} style={{borderColor:'#BEBEBE',borderRadius:5,borderWidth:1,textAlign:'center',width:80,height:80}} />
                                             :
                                             <TouchableOpacity onPress={()=>this.setPhoto(1)}>
-                                                <Image source={require('../../assets/images/images/picAdd.png')}style={{borderColor:'#BEBEBE',borderRadius:5,borderWidth:1,textAlign:'center',width:80,height:80}} />
+                                                <Image source={Images.picAdd}style={{borderColor:'#BEBEBE',borderRadius:5,borderWidth:1,textAlign:'center',width:80,height:80}} />
                                             </TouchableOpacity>
                                     }
                                     {
@@ -281,7 +281,7 @@ export default class OrderDetail extends Component {
                                             <Image source={{uri:this.state.photo_list[2].img_url}} style={{borderColor:'#BEBEBE',borderRadius:5,borderWidth:1,textAlign:'center',width:80,height:80}} />
                                             :
                                             <TouchableOpacity onPress={()=>this.setPhoto(2)}>
-                                                <Image source={require('../../assets/images/images/picAdd.png')}style={{borderColor:'#BEBEBE',borderRadius:5,borderWidth:1,textAlign:'center',width:80,height:80}} />
+                                                <Image source={Images.picAdd}style={{borderColor:'#BEBEBE',borderRadius:5,borderWidth:1,textAlign:'center',width:80,height:80}} />
                                             </TouchableOpacity>
                                     }
                                 </View>
@@ -292,7 +292,7 @@ export default class OrderDetail extends Component {
                                             <Image source={{uri:this.state.photo_list[3].img_url}} style={{borderColor:'#BEBEBE',borderRadius:5,borderWidth:1,textAlign:'center',width:80,height:80}} />
                                             :
                                             <TouchableOpacity onPress={()=>this.setPhoto(3)}>
-                                                <Image source={require('../../assets/images/images/picAdd.png')}style={{borderColor:'#BEBEBE',borderRadius:5,borderWidth:1,textAlign:'center',width:80,height:80}} />
+                                                <Image source={Images.picAdd}style={{borderColor:'#BEBEBE',borderRadius:5,borderWidth:1,textAlign:'center',width:80,height:80}} />
                                             </TouchableOpacity>
                                     }
                                     {
@@ -300,7 +300,7 @@ export default class OrderDetail extends Component {
                                             <Image source={{uri:this.state.photo_list[4].img_url}} style={{borderColor:'#BEBEBE',borderRadius:5,borderWidth:1,textAlign:'center',width:80,height:80}} />
                                             :
                                             <TouchableOpacity onPress={()=>this.setPhoto(4)}>
-                                                <Image source={require('../../assets/images/images/picAdd.png')}style={{borderColor:'#BEBEBE',borderRadius:5,borderWidth:1,textAlign:'center',width:80,height:80}} />
+                                                <Image source={Images.picAdd}style={{borderColor:'#BEBEBE',borderRadius:5,borderWidth:1,textAlign:'center',width:80,height:80}} />
                                             </TouchableOpacity>
                                     }
                                     {
@@ -308,7 +308,7 @@ export default class OrderDetail extends Component {
                                             <Image source={{uri:this.state.photo_list[5].img_url}} style={{borderColor:'#BEBEBE',borderRadius:5,borderWidth:1,textAlign:'center',width:80,height:80}} />
                                             :
                                             <TouchableOpacity onPress={()=>this.setPhoto(5)}>
-                                                <Image source={require('../../assets/images/images/picAdd.png')}style={{borderColor:'#BEBEBE',borderRadius:5,borderWidth:1,textAlign:'center',width:80,height:80}} />
+                                                <Image source={Images.picAdd}style={{borderColor:'#BEBEBE',borderRadius:5,borderWidth:1,textAlign:'center',width:80,height:80}} />
                                             </TouchableOpacity>
                                     }
                                 </View>

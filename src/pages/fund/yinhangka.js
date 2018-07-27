@@ -224,7 +224,7 @@ export default class Yinhangka extends Component {
                     Toast.toastShort('温馨提示：暂不支持绑定信用卡，请绑定您常用的银行借记卡!', 5000);
                     RouterHelper.navigate('', 'AddBank')
                 }} style={[styles.addBank, GlobalStyle.flexRowCenter]}>
-                    {/*<Image source={require('../../assets/images/icons/icon_addbank.png')} style={styles.addIco} />*/}
+                    {/*<Image source={Images.icon_addbank} style={styles.addIco} />*/}
                     <Text style={styles.addText}>添加银行卡</Text>
                 </TouchableOpacity>
             </View>

@@ -249,7 +249,7 @@ export default class Pinggu extends Component {
                                         style={[{ width: 60, height: 60,  },styles.picAdd]} />
                                     :
                                     <View style={[styles.picAdd]}>
-                                        <Image source={require('../../assets/images/images/picAdd.png')}
+                                        <Image source={Images.picAdd}
                                                style={{ width: 60, height: 60, }} />
                                         <Text >点击添加图片</Text>
                                     </View>
@@ -271,7 +271,7 @@ export default class Pinggu extends Component {
                                        style={[{ width: 60, height: 60,  },styles.picAdd]} />
                                 :
                                 <View style={[styles.picAdd]}>
-                                    <Image source={require('../../assets/images/images/picAdd.png')}
+                                    <Image source={Images.picAdd}
                                            style={{ width: 60, height: 60, }} />
                                     <Text >点击添加图片</Text>
                                 </View>

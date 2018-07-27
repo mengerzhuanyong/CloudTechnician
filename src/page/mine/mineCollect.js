@@ -1,5 +1,5 @@
 /**
- * 云技师 - Forum
+ * 云技师 - MineCollect
  * https://menger.me
  * @大梦
  */
@@ -18,7 +18,7 @@ import {HorizontalLine, VerticalLine} from "../../component/common/CommonLine";
 import FlatListView from "../../component/list/FlatListView";
 import CardItem from "../../component/item/CardItem";
 
-export default class Forum extends Component {
+export default class MineCollect extends Component {
 
     constructor(props) {
         super(props);

@@ -83,10 +83,6 @@ export default class RetrievePassword extends Component {
                     style={{
                         backgroundColor: GlobalStyle.bgColor,
                     }}
-                    statusBar={{
-                        barStyle: 'dark-content'
-                    }}
-                    titleStyle={{color: '#333'}}
                 />
                 <View style={styles.loginWrap}>
                     <View style={styles.inputCellWrap}>

@@ -465,7 +465,7 @@ export default class Renshengou extends Component {
                         <View style={[GlobalStyle.radioItem, GlobalStyle.flexRowStartStart, {marginTop: 20}]}>
                             {this.state.isTongyi ?
                                 <TouchableOpacity onPress={() => {this.setTongyi()}} style={[GlobalStyle.checkboxLeft, {borderColor: GlobalStyle.themeColor, backgroundColor: GlobalStyle.themeColor}]}>
-                                    <Image source={require('../../assets/images/icons/icon_gouxuan.png')} style={[GlobalStyle.gouxuanIco]} />
+                                    <Image source={Images.icon_gouxuan} style={[GlobalStyle.gouxuanIco]} />
                                 </TouchableOpacity>
                             : 
                                 <TouchableOpacity onPress={() => {this.setTongyi()}} style={[GlobalStyle.checkboxLeft, {borderColor: '#666', }]}></TouchableOpacity> 
@@ -489,7 +489,7 @@ export default class Renshengou extends Component {
                     
                 <View style={styles.botBar}>
                     <TouchableOpacity onPress={()=>{RouterHelper.navigate('', 'Jisuanqi')}} style={styles.botLeft}>
-                        <Image source={require('../../assets/images/icons/icon_shouyi.png')} style={[styles.botLeftIco, {width: 24*96/100}]} />
+                        <Image source={Images.icon_shouyi} style={[styles.botLeftIco, {width: 24*96/100}]} />
                         <Text style={styles.botLeftText}>收益计算</Text>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={()=>{this.submit()}} style={styles.botRight}>
@@ -509,7 +509,7 @@ export default class Renshengou extends Component {
                     <View style={GlobalStyle.userlistright}>
                         <Text style={[GlobalStyle.userlisttext, styles.renzhengText]}>专业投资者认证</Text>
                         <Text style={[styles.userlistRightText, {color: '#f00'}]}>{this.state.investor_msg}</Text>
-                        <Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />
+                        <Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />
                     </View>
                 </TouchableOpacity>
             )
@@ -520,7 +520,7 @@ export default class Renshengou extends Component {
                     <View style={GlobalStyle.userlistright}>
                         <Text style={[GlobalStyle.userlisttext, styles.renzhengText]}>专业投资者认证</Text>
                         <Text style={[styles.userlistRightText, {color: '#f00'}]}>{this.state.investor_msg}</Text>
-                        <Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />
+                        <Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />
                     </View>
                 </TouchableOpacity>
             )
@@ -532,7 +532,7 @@ export default class Renshengou extends Component {
                         <View style={GlobalStyle.userlistright}>
                             <Text style={[GlobalStyle.userlisttext, styles.renzhengText]}>专业投资者认证</Text>
                             <Text style={styles.userlistRightText}>{this.state.investor_msg}</Text>
-                            <Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />
+                            <Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />
                         </View>
                     </TouchableOpacity>
                 )
@@ -542,7 +542,7 @@ export default class Renshengou extends Component {
                         <View style={GlobalStyle.userlistright}>
                             <Text style={[GlobalStyle.userlisttext, styles.renzhengText]}>专业投资者认证</Text>
                             <Text style={styles.userlistRightText}>{this.state.investor_msg}</Text>
-                            <Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />
+                            <Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />
                         </View>
                     </TouchableOpacity>
                 )
@@ -554,7 +554,7 @@ export default class Renshengou extends Component {
                     <View style={GlobalStyle.userlistright}>
                         <Text style={[GlobalStyle.userlisttext, styles.renzhengText]}>专业投资者认证</Text>
                             <Text style={styles.userlistRightText}>{this.state.investor_msg}</Text>
-                        <Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />
+                        <Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />
                     </View>
                 </TouchableOpacity>
             )
@@ -565,7 +565,7 @@ export default class Renshengou extends Component {
                     <View style={GlobalStyle.userlistright}>
                         <Text style={[GlobalStyle.userlisttext, styles.renzhengText]}>专业投资者认证</Text>
                             <Text style={[styles.userlistRightText, {color: '#f00'}]}>{this.state.investor_msg}</Text>
-                        <Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />
+                        <Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />
                     </View>
                 </TouchableOpacity>
             )
@@ -582,7 +582,7 @@ export default class Renshengou extends Component {
                         <View style={GlobalStyle.userlistright}>
                             <Text style={[GlobalStyle.userlisttext, styles.renzhengText]}>绑定银行借记卡</Text>
                             <Text style={styles.userlistRightText}>{this.state.is_bank_card === 1 ? '已绑定' : '未绑定'}</Text>
-                            <Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />
+                            <Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />
                         </View>
                     </TouchableOpacity>
                 )
@@ -592,7 +592,7 @@ export default class Renshengou extends Component {
                         <View style={GlobalStyle.userlistright}>
                             <Text style={[GlobalStyle.userlisttext, styles.renzhengText]}>绑定银行借记卡</Text>
                             <Text style={styles.userlistRightText}>{this.state.is_bank_card === 1 ? '已绑定' : '未绑定'}</Text>
-                            <Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />
+                            <Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />
                         </View>
                     </TouchableOpacity>
                 )
@@ -604,7 +604,7 @@ export default class Renshengou extends Component {
                         <View style={GlobalStyle.userlistright}>
                             <Text style={[GlobalStyle.userlisttext, styles.renzhengText]}>绑定银行借记卡</Text>
                             <Text style={styles.userlistRightText}>{this.state.is_bank_card === 1 ? '已绑定' : '未绑定'}</Text>
-                            <Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />
+                            <Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />
                         </View>
                     </TouchableOpacity>
                 )
@@ -614,7 +614,7 @@ export default class Renshengou extends Component {
                         <View style={GlobalStyle.userlistright}>
                             <Text style={[GlobalStyle.userlisttext, styles.renzhengText]}>绑定银行借记卡</Text>
                             <Text style={styles.userlistRightText}>{this.state.is_bank_card === 1 ? '已绑定' : '未绑定'}</Text>
-                            <Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />
+                            <Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />
                         </View>
                     </TouchableOpacity>
                 )
@@ -630,7 +630,7 @@ export default class Renshengou extends Component {
                     <View style={GlobalStyle.userlistright}>
                         <Text style={[GlobalStyle.userlisttext, styles.renzhengText]}>技能认证</Text>
                         <Text style={[styles.userlistRightText, {color: '#f00'}]}>{this.state.is_risk === 1 ? '已通过' : '未通过'}</Text>
-                        <Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />
+                        <Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />
                     </View>
                 </TouchableOpacity>
             )
@@ -641,7 +641,7 @@ export default class Renshengou extends Component {
                         <View style={GlobalStyle.userlistright}>
                             <Text style={[GlobalStyle.userlisttext, styles.renzhengText]}>技能认证</Text>
                             <Text style={styles.userlistRightText}>{this.state.is_risk === 1 ? '已通过' : '未评估'}</Text>
-                            <Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />
+                            <Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />
                         </View>
                     </TouchableOpacity>
                 )
@@ -651,7 +651,7 @@ export default class Renshengou extends Component {
                         <View style={GlobalStyle.userlistright}>
                             <Text style={[GlobalStyle.userlisttext, styles.renzhengText]}>技能认证</Text>
                             <Text style={styles.userlistRightText}>{this.state.is_risk === 1 ? '已通过' : '未通过'}</Text>
-                            <Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />
+                            <Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />
                         </View>
                     </View>
                 )

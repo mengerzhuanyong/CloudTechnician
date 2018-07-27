@@ -168,7 +168,7 @@ export default class Tixian extends Component {
                     {/*{global.user.userData.head_img ? */}
                     {/*<Image source={{uri: global.user.userData.head_img}} style={styles.userPhoto} />*/}
                     {/*: null}*/}
-                    {/*<Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />*/}
+                    {/*<Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />*/}
                     {/*</View>*/}
                     {/*</TouchableOpacity>*/}
                     <View style={GlobalStyle.userlist}>

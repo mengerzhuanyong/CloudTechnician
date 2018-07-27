@@ -19,6 +19,14 @@ import Register from '../page/login/register'
 import RetrievePassword from '../page/login/retrievePassword'
 
 import CommonWebPage from '../page/common/commonWebPage'
+import Setting from "../page/system/setting";
+import Order from "../page/order/order";
+import OrderDetail from "../page/order/orderDetail";
+import MineCollect from "../page/mine/mineCollect";
+import MineAssets from "../page/mine/mineAssets";
+import MineDate from "../page/mine/mineDate";
+import MemberCenter from "../page/mine/memberCenter";
+import SystemMessage from "../page/system/systemMessage";
 
 const TabNavigator = createBottomTabNavigator({
     Home: {
@@ -46,7 +54,7 @@ const TabNavigator = createBottomTabNavigator({
         })
     },
 }, {
-    initialRouteName: 'Home',
+    initialRouteName: 'Mine',
     tabBarOptions: {
         showIcon: true,
         indicatorStyle: {height: 0},
@@ -71,8 +79,20 @@ const StackNavigator = createStackNavigator(configRouter({
     Login: {screen: Login},
     Register: {screen: Register},
     RetrievePassword: {screen: RetrievePassword},
+
+    Order: {screen: Order},
+    OrderDetail: {screen: OrderDetail},
+
+    MineCollect: {screen: MineCollect},
+    MineAssets: {screen: MineAssets},
+    MineDate: {screen: MineDate},
+    MemberCenter: {screen: MemberCenter},
+
+    Setting: {screen: Setting},
+    SystemMessage: {screen: SystemMessage},
+
 }), {
-    initialRouteName: 'Login',
+    initialRouteName: 'Tab',
     cardStyle: {
         shadowOpacity: 0,
         shadowRadius: 0,

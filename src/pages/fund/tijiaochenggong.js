@@ -157,7 +157,7 @@ export default class Tijiaochenggong extends Component {
                 />
                 <ScrollView>
                     <View style={[styles.tijiaoStatus, GlobalStyle.whiteModule, GlobalStyle.mt10, GlobalStyle.flexColumnCenter]}>
-                        <Image source={require('../../assets/images/icons/icon_chenggong.png')} style={styles.statusIco} />
+                        <Image source={Images.icon_chenggong} style={styles.statusIco} />
                         <Text style={styles.statusText}>订单提交成功</Text>
                     </View>
                     <View style={[styles.tijiaoInfo, GlobalStyle.whiteModule, GlobalStyle.mt10, GlobalStyle.pt0]}>

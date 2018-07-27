@@ -106,13 +106,13 @@ export default class ProductInfo extends Component {
 
                     <Text style={GlobalStyle.userlisttext}> 分类管理</Text>
                     {/*<View style={GlobalStyle.userlistleft}>*/}
-                    {/*<Image source={require('../../assets/images/icons/icon_user_zichan.png')} style={GlobalStyle.usericon} />*/}
+                    {/*<Image source={Images.icon_user_zichan} style={GlobalStyle.usericon} />*/}
                     {/*</View>*/}
                     <Text>  |  </Text>
                     <View style={GlobalStyle.userlistright}>
                         <Text style={GlobalStyle.userlisttext}>请选择</Text>
                         <Text style={styles.userlistRightText}>{this.state.time}</Text>
-                        <Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />
+                        <Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />
                     </View>
                 </TouchableOpacity>
                 <Cyhnews {...this.props}/>

@@ -166,7 +166,7 @@ export default class Jisuanqi extends Component {
                                             </View>
                                         </View>
                                     </ModalDropdown>
-                                    <Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={styles.userlistmore} />
+                                    <Image source={Images.icon_user_arrow} style={styles.userlistmore} />
                                 </View>
                             </View>
                         </View>  

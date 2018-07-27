@@ -242,13 +242,13 @@ export default class Register extends Component {
                         <TouchableOpacity onPress={() => {
                             this.onBack()
                         }} style={styles.loginback}>
-                            <Image source={require('../../assets/images/icons/icon_angle_left_grey.png')}
+                            <Image source={Images.icon_angle_left_grey}
                                    style={styles.loginbackico}/>
                         </TouchableOpacity>
                     </View>
                     <View style={styles.loginwrap}>
                         <View style={styles.loginlogo}>
-                            <Image source={require('../../assets/images/images/image_login_logo.png')}
+                            <Image source={Images.image_login_logo}
                                    style={styles.loginlogoico}/>
                         </View>
                         <View style={styles.mcell}>

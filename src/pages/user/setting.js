@@ -223,18 +223,18 @@ export default class Setting extends Component {
                         {/*{global.user.userData.head_img ?*/}
                             {/*<Image source={{uri: global.user.userData.head_img}} style={styles.mtouxiang} />*/}
                             {/*:*/}
-                            {/*<Image source={require('../../assets/images/icons/icon_user_touxiang.png')} style={styles.mtouxiang} />*/}
+                            {/*<Image source={Images.icon_user_touxiang} style={styles.mtouxiang} />*/}
                         {/*}*/}
                         {/*<Text style={styles.mnicheng}>{global.user.userData.nickname ? global.user.userData.nickname : global.user.userData.account}</Text>*/}
                     {/*</View>*/}
                     {/*{global.user.userData.is_investor === 1 ?*/}
                         {/*<View style={[styles.mshenfen, GlobalStyle.flexColumnCenter]}>*/}
-                            {/*<Image source={require('../../assets/images/icons/icon_member_zhuanyetouzizhe.png')} style={styles.msfico} />*/}
+                            {/*<Image source={Images.icon_member_zhuanyetouzizhe} style={styles.msfico} />*/}
                             {/*<Text style={styles.msftext}>专业投资者</Text>*/}
                         {/*</View>*/}
                         {/*:*/}
                         {/*<View style={[styles.mshenfen, GlobalStyle.flexColumnCenter]}>*/}
-                            {/*<Image source={require('../../assets/images/icons/icon_member_putonghuiyuan.png')} style={styles.msfico} />*/}
+                            {/*<Image source={Images.icon_member_putonghuiyuan} style={styles.msfico} />*/}
                             {/*<Text style={styles.msftext}>普通会员</Text>*/}
                         {/*</View>*/}
                     {/*}*/}
@@ -244,22 +244,22 @@ export default class Setting extends Component {
                 <View style={[GlobalStyle.whiteModule, {marginTop: 10}]}>
                     <TouchableOpacity  style={GlobalStyle.userlist}>
                         {/*<View style={GlobalStyle.userlistleft}>*/}
-                            {/*<Image source={require('../../assets/images/icons/icon_member_gerenxinxi.png')} style={GlobalStyle.usericon} />*/}
+                            {/*<Image source={Images.icon_member_gerenxinxi} style={GlobalStyle.usericon} />*/}
                         {/*</View>*/}
                         <View style={GlobalStyle.userlistright}>
                             <Text style={GlobalStyle.userlisttext}>清除缓存</Text>
-                            {/*<Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />*/}
+                            {/*<Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />*/}
                         </View>
                     </TouchableOpacity>
                     {/*{this.yinhangka()}*/}
 
                     <TouchableOpacity  style={GlobalStyle.userlist}>
                         {/*<View style={GlobalStyle.userlistleft}>*/}
-                            {/*<Image source={require('../../assets/images/icons/icon_member_mimaguanli.png')} style={GlobalStyle.usericon} />*/}
+                            {/*<Image source={Images.icon_member_mimaguanli} style={GlobalStyle.usericon} />*/}
                         {/*</View>*/}
                         <View style={GlobalStyle.userlistright}>
                             <Text style={GlobalStyle.userlisttext}>当前版本</Text>
-                            {/*<Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />*/}
+                            {/*<Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />*/}
                         </View>
                     </TouchableOpacity>
                     {this.pinggu()}
@@ -269,11 +269,11 @@ export default class Setting extends Component {
                 <View style={[GlobalStyle.whiteModule, {marginTop: 10}]}>
                     <TouchableOpacity onPress = {() => {this.showActionSheet()}} style={GlobalStyle.userlist}>
                         {/*<View style={GlobalStyle.userlistleft}>*/}
-                            {/*<Image source={require('../../assets/images/icons/icon_member_tuichu.png')} style={GlobalStyle.usericon} />*/}
+                            {/*<Image source={Images.icon_member_tuichu} style={GlobalStyle.usericon} />*/}
                         {/*</View>*/}
                         <View style={GlobalStyle.userlistright}>
                             <Text style={GlobalStyle.userlisttext}>安全退出</Text>
-                            <Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />
+                            <Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />
                         </View>
                     </TouchableOpacity>
                 </View>
@@ -296,12 +296,12 @@ export default class Setting extends Component {
                 return (
                     <TouchableOpacity onPress={() => {Toast.toastShort(this.state.is_pay_auth_msg);RouterHelper.navigate('', 'RenzhengType')}} style={GlobalStyle.userlist}>
                         {/*<View style={GlobalStyle.userlistleft}>*/}
-                            {/*<Image source={require('../../assets/images/icons/icon_member_yinhangka.png')} style={GlobalStyle.usericon} />*/}
+                            {/*<Image source={Images.icon_member_yinhangka} style={GlobalStyle.usericon} />*/}
                         {/*</View>*/}
                         <View style={GlobalStyle.userlistright}>
                             <Text style={GlobalStyle.userlisttext}>银行卡</Text>
                             <Text style={styles.userlistRightText}>{this.state.is_bank_card === 1 ? '已绑定' : '未绑定'}</Text>
-                            <Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />
+                            <Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />
                         </View>
                     </TouchableOpacity>
                 )
@@ -309,12 +309,12 @@ export default class Setting extends Component {
                 return (
                     <TouchableOpacity onPress={() => {Toast.toastShort(this.state.is_pay_auth_msg);RouterHelper.navigate('', 'Renzheng')}} style={GlobalStyle.userlist}>
                         {/*<View style={GlobalStyle.userlistleft}>*/}
-                            {/*<Image source={require('../../assets/images/icons/icon_member_yinhangka.png')} style={GlobalStyle.usericon} />*/}
+                            {/*<Image source={Images.icon_member_yinhangka} style={GlobalStyle.usericon} />*/}
                         {/*</View>*/}
                         <View style={GlobalStyle.userlistright}>
                             <Text style={GlobalStyle.userlisttext}>银行卡</Text>
                             <Text style={styles.userlistRightText}>{this.state.is_bank_card === 1 ? '已绑定' : '未绑定'}</Text>
-                            <Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />
+                            <Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />
                         </View>
                     </TouchableOpacity>
                 )
@@ -324,12 +324,12 @@ export default class Setting extends Component {
                 return (
                     <TouchableOpacity onPress={() => {RouterHelper.navigate('', 'Yinhangka')}} style={GlobalStyle.userlist}>
                         {/*<View style={GlobalStyle.userlistleft}>*/}
-                            {/*<Image source={require('../../assets/images/icons/icon_member_yinhangka.png')} style={GlobalStyle.usericon} />*/}
+                            {/*<Image source={Images.icon_member_yinhangka} style={GlobalStyle.usericon} />*/}
                         {/*</View>*/}
                         <View style={GlobalStyle.userlistright}>
                             <Text style={GlobalStyle.userlisttext}>银行卡</Text>
                             <Text style={styles.userlistRightText}>{this.state.is_bank_card === 1 ? '已绑定' : '未绑定'}</Text>
-                            <Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />
+                            <Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />
                         </View>
                     </TouchableOpacity>
                 )
@@ -337,12 +337,12 @@ export default class Setting extends Component {
                 return (
                     <TouchableOpacity onPress={() => {RouterHelper.navigate('', 'Yinhangka')}} style={GlobalStyle.userlist}>
                         {/*<View style={GlobalStyle.userlistleft}>*/}
-                            {/*<Image source={require('../../assets/images/icons/icon_member_yinhangka.png')} style={GlobalStyle.usericon} />*/}
+                            {/*<Image source={Images.icon_member_yinhangka} style={GlobalStyle.usericon} />*/}
                         {/*</View>*/}
                         <View style={GlobalStyle.userlistright}>
                             <Text style={GlobalStyle.userlisttext}>银行卡</Text>
                             <Text style={styles.userlistRightText}>{this.state.is_bank_card === 1 ? '已绑定' : '未绑定'}</Text>
-                            <Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />
+                            <Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />
                         </View>
                     </TouchableOpacity>
                 )
@@ -356,12 +356,12 @@ export default class Setting extends Component {
             return (
                 <TouchableOpacity onPress={() => { this.toWebview('http://yuntu.3todo.com/index/article/info/id/3', '', '', 'NewsWebDetail')}} style={GlobalStyle.userlist}>
                     {/*<View style={GlobalStyle.userlistleft}>*/}
-                        {/*<Image source={require('../../assets/images/icons/icon_member_fengxianpinggu.png')} style={GlobalStyle.usericon} />*/}
+                        {/*<Image source={Images.icon_member_fengxianpinggu} style={GlobalStyle.usericon} />*/}
                     {/*</View>*/}
                     <View style={GlobalStyle.userlistright}>
                         <Text style={GlobalStyle.userlisttext}>关于我们</Text>
                         {/*<Text style={styles.userlistRightText}>{this.state.is_risk === 1 ? '已通过' : '未通过'}</Text>*/}
-                        <Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />
+                        <Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />
                     </View>
                 </TouchableOpacity>
             )
@@ -370,12 +370,12 @@ export default class Setting extends Component {
         //         return (
         //             <TouchableOpacity onPress={() => {RouterHelper.navigate('', 'Guanyu')}} style={GlobalStyle.userlist}>
         //                 {/*<View style={GlobalStyle.userlistleft}>*/}
-        //                     {/*<Image source={require('../../assets/images/icons/icon_member_fengxianpinggu.png')} style={GlobalStyle.usericon} />*/}
+        //                     {/*<Image source={Images.icon_member_fengxianpinggu} style={GlobalStyle.usericon} />*/}
         //                 {/*</View>*/}
         //                 <View style={GlobalStyle.userlistright}>
         //                     <Text style={GlobalStyle.userlisttext}>关于我们</Text>
         //                     {/*<Text style={styles.userlistRightText}>{this.state.is_risk === 1 ? '已通过' : '未评估'}</Text>*/}
-        //                     <Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />
+        //                     <Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />
         //                 </View>
         //             </TouchableOpacity>
         //         )
@@ -383,12 +383,12 @@ export default class Setting extends Component {
         //         return (
         //             <View style={GlobalStyle.userlist}>
         //                 {/*<View style={GlobalStyle.userlistleft}>*/}
-        //                     {/*<Image source={require('../../assets/images/icons/icon_member_fengxianpinggu.png')} style={GlobalStyle.usericon} />*/}
+        //                     {/*<Image source={Images.icon_member_fengxianpinggu} style={GlobalStyle.usericon} />*/}
         //                 {/*</View>*/}
         //                 <View style={GlobalStyle.userlistright}>
         //                     <Text style={GlobalStyle.userlisttext}>关于我们</Text>
         //                     {/*<Text style={styles.userlistRightText}>{this.state.is_risk === 1 ? '已通过' : '未通过'}</Text>*/}
-        //                     <Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />
+        //                     <Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />
         //                 </View>
         //             </View>
         //         )

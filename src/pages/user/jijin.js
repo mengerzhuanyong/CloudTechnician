@@ -185,13 +185,13 @@ export default class Jijin extends Component {
                         <View style={GlobalStyle.userlistright}>
                             <Text style={[GlobalStyle.userlisttext]}>已累计收益</Text>
                             <Text style={styles.userlistRightText}>{this.state.clear_money_total}</Text>
-                            <Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />
+                            <Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />
                         </View>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={() => RouterHelper.navigate('', 'JijinGonggao', 3)} style={[GlobalStyle.userlist]}>
                         <View style={GlobalStyle.userlistright}>
                             <Text style={[GlobalStyle.userlisttext]}>基金公告</Text>
-                            <Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />
+                            <Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />
                         </View>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={() => {RouterHelper.navigate('', 'Order')}} style={GlobalStyle.submit}>

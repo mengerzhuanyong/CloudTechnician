@@ -946,7 +946,7 @@ export default class Renzheng extends Component {
                                 {this.state.assets === '1' ?
                                     <TouchableOpacity onPress={() => {this.setAssets(1)}} style={[GlobalStyle.radioItem, GlobalStyle.flexRowStartStart]}>
                                         <View style={[GlobalStyle.radioLeft, {borderColor: GlobalStyle.themeColor, backgroundColor: GlobalStyle.themeColor}]}>
-                                            <Image source={require('../../assets/images/icons/icon_gouxuan.png')} style={[GlobalStyle.gouxuanIco]} />
+                                            <Image source={Images.icon_gouxuan} style={[GlobalStyle.gouxuanIco]} />
                                         </View>
                                         <Text style={GlobalStyle.radioRightThemeColor}>最近三年年均收入不低于人民币50万元</Text>
                                     </TouchableOpacity>
@@ -959,7 +959,7 @@ export default class Renzheng extends Component {
                                 {this.state.assets === 2 ?
                                     <TouchableOpacity onPress={() => {this.setAssets(2)}} style={[GlobalStyle.radioItem, GlobalStyle.flexRowStartStart]}>
                                         <View style={[GlobalStyle.radioLeft, {borderColor: GlobalStyle.themeColor, backgroundColor: GlobalStyle.themeColor}]}>
-                                            <Image source={require('../../assets/images/icons/icon_gouxuan.png')} style={[GlobalStyle.gouxuanIco]} />
+                                            <Image source={Images.icon_gouxuan} style={[GlobalStyle.gouxuanIco]} />
                                         </View>
                                         <Text style={GlobalStyle.radioRightThemeColor}>金融资产不低于人民币500万元</Text>
                                     </TouchableOpacity>
@@ -972,7 +972,7 @@ export default class Renzheng extends Component {
                                 {this.state.assets === 3 ?
                                     <TouchableOpacity onPress={() => {this.setAssets(3)}} style={[GlobalStyle.radioItem, GlobalStyle.flexRowStartStart]}>
                                         <View style={[GlobalStyle.radioLeft, {borderColor: GlobalStyle.themeColor, backgroundColor: GlobalStyle.themeColor}]}>
-                                            <Image source={require('../../assets/images/icons/icon_gouxuan.png')} style={[GlobalStyle.gouxuanIco]} />
+                                            <Image source={Images.icon_gouxuan} style={[GlobalStyle.gouxuanIco]} />
                                         </View>
                                         <Text style={GlobalStyle.radioRightThemeColor}>最近20个交易日，金融资产不低于300万元</Text>
                                     </TouchableOpacity>
@@ -1010,7 +1010,7 @@ export default class Renzheng extends Component {
                                 {this.state.experience1 === 1 ?
                                     <TouchableOpacity onPress={() => {this.setExperience1(0)}} style={[GlobalStyle.radioItem, GlobalStyle.flexRowStartStart]}>
                                         <View style={[GlobalStyle.checkboxLeft, {borderColor: GlobalStyle.themeColor, backgroundColor: GlobalStyle.themeColor}]}>
-                                            <Image source={require('../../assets/images/icons/icon_gouxuan.png')} style={[GlobalStyle.gouxuanIco]} />
+                                            <Image source={Images.icon_gouxuan} style={[GlobalStyle.gouxuanIco]} />
                                         </View>
                                         <Text style={GlobalStyle.radioRightThemeColor}>具有2年以上证券、基金、期货、黄金、外汇等投资经历</Text>
                                     </TouchableOpacity>
@@ -1023,7 +1023,7 @@ export default class Renzheng extends Component {
                                 {this.state.experience2 === 1 ?
                                     <TouchableOpacity onPress={() => {this.setExperience2(0)}} style={[GlobalStyle.radioItem, GlobalStyle.flexRowStartStart]}>
                                         <View style={[GlobalStyle.checkboxLeft, {borderColor: GlobalStyle.themeColor, backgroundColor: GlobalStyle.themeColor}]}>
-                                            <Image source={require('../../assets/images/icons/icon_gouxuan.png')} style={[GlobalStyle.gouxuanIco]} />
+                                            <Image source={Images.icon_gouxuan} style={[GlobalStyle.gouxuanIco]} />
                                         </View>
                                         <Text style={GlobalStyle.radioRightThemeColor}>具有2年以上金融产品设计、投资、风险管理及相关工作经历</Text>
                                     </TouchableOpacity>
@@ -1036,7 +1036,7 @@ export default class Renzheng extends Component {
                                 {this.state.experience3 === 1 ?
                                     <TouchableOpacity onPress={() => {this.setExperience3(0)}} style={[GlobalStyle.radioItem, GlobalStyle.flexRowStartStart]}>
                                         <View style={[GlobalStyle.checkboxLeft, {borderColor: GlobalStyle.themeColor, backgroundColor: GlobalStyle.themeColor}]}>
-                                            <Image source={require('../../assets/images/icons/icon_gouxuan.png')} style={[GlobalStyle.gouxuanIco]} />
+                                            <Image source={Images.icon_gouxuan} style={[GlobalStyle.gouxuanIco]} />
                                         </View>
                                         <Text style={GlobalStyle.radioRightThemeColor}>获得职业资格认证的从事金融相关业务的注册会计师和律师</Text>
                                     </TouchableOpacity>
@@ -1049,7 +1049,7 @@ export default class Renzheng extends Component {
                                 {this.state.experience4 === 1 ?
                                     <TouchableOpacity onPress={() => {this.setExperience4(0)}} style={[GlobalStyle.radioItem, GlobalStyle.flexRowStartStart]}>
                                         <View style={[GlobalStyle.checkboxLeft, {borderColor: GlobalStyle.themeColor, backgroundColor: GlobalStyle.themeColor}]}>
-                                            <Image source={require('../../assets/images/icons/icon_gouxuan.png')} style={[GlobalStyle.gouxuanIco]} />
+                                            <Image source={Images.icon_gouxuan} style={[GlobalStyle.gouxuanIco]} />
                                         </View>
                                         <Text style={GlobalStyle.radioRightThemeColor}>经有关金融监管部门批准设立的金融机构的高级管理人员</Text>
                                     </TouchableOpacity>
@@ -1172,7 +1172,7 @@ export default class Renzheng extends Component {
                         <TouchableOpacity onPress={() => {this.setTongyi(0)}} style={[GlobalStyle.mradio, {width: GlobalStyle.width - 60, marginTop: 20, marginBottom: -15}]}>
                             <View style={[GlobalStyle.radioItem, GlobalStyle.flexRowStartStart]}>
                                 <View style={[GlobalStyle.checkboxLeft, {borderColor: GlobalStyle.themeColor, backgroundColor: GlobalStyle.themeColor}]}>
-                                    <Image source={require('../../assets/images/icons/icon_gouxuan.png')} style={[GlobalStyle.gouxuanIco]} />
+                                    <Image source={Images.icon_gouxuan} style={[GlobalStyle.gouxuanIco]} />
                                 </View>
                                 <Text style={GlobalStyle.radioRightThemeColor}>本人保证资金来源的合法性和所提供资料的真实性、有效性、准确性、完整性，并对其承担责任。</Text>
                             </View>

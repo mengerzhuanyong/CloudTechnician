@@ -298,7 +298,7 @@ export default class Gerenxinxi extends Component {
                             {global.user.userData.head_img ? 
                                 <Image source={{uri: global.user.userData.head_img}} style={styles.userPhoto} />
                                 : null}
-                            <Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />
+                            <Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />
                         </View>
                     </TouchableOpacity>
                     <View style={GlobalStyle.userlist}>
@@ -387,7 +387,7 @@ export default class Gerenxinxi extends Component {
                     <View style={GlobalStyle.userlistright}>
                         <Text style={[GlobalStyle.userlisttext]}>专业投资者认证</Text>
                         <Text style={[styles.userlistRightText, {color: '#f00'}]}>{this.state.investor_msg}</Text>
-                        <Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />
+                        <Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />
                     </View>
                 </TouchableOpacity>
             )
@@ -398,7 +398,7 @@ export default class Gerenxinxi extends Component {
                     <View style={GlobalStyle.userlistright}>
                         <Text style={[GlobalStyle.userlisttext]}>专业投资者认证</Text>
                         <Text style={[styles.userlistRightText, {color: '#f00'}]}>{this.state.investor_msg}</Text>
-                        <Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />
+                        <Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />
                     </View>
                 </TouchableOpacity>
             )
@@ -410,7 +410,7 @@ export default class Gerenxinxi extends Component {
                         <View style={GlobalStyle.userlistright}>
                             <Text style={[GlobalStyle.userlisttext]}>专业投资者认证</Text>
                             <Text style={styles.userlistRightText}>{this.state.investor_msg}</Text>
-                            <Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />
+                            <Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />
                         </View>
                     </TouchableOpacity>
                 )
@@ -420,7 +420,7 @@ export default class Gerenxinxi extends Component {
                         <View style={GlobalStyle.userlistright}>
                             <Text style={[GlobalStyle.userlisttext]}>专业投资者认证</Text>
                             <Text style={styles.userlistRightText}>{this.state.investor_msg}</Text>
-                            <Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />
+                            <Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />
                         </View>
                     </TouchableOpacity>
                 )
@@ -432,7 +432,7 @@ export default class Gerenxinxi extends Component {
                     <View style={GlobalStyle.userlistright}>
                         <Text style={[GlobalStyle.userlisttext]}>专业投资者认证</Text>
                             <Text style={styles.userlistRightText}>{this.state.investor_msg}</Text>
-                        <Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />
+                        <Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />
                     </View>
                 </TouchableOpacity>
             )
@@ -443,7 +443,7 @@ export default class Gerenxinxi extends Component {
                     <View style={GlobalStyle.userlistright}>
                         <Text style={[GlobalStyle.userlisttext]}>专业投资者认证</Text>
                         <Text style={[styles.userlistRightText, {color: '#f00'}]}>{this.state.investor_msg}</Text>
-                        <Image source={require('../../assets/images/icons/icon_user_arrow.png')} style={GlobalStyle.userlistmore} />
+                        <Image source={Images.icon_user_arrow} style={GlobalStyle.userlistmore} />
                     </View>
                 </TouchableOpacity>
             )
